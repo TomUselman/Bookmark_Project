@@ -1,0 +1,18 @@
+<h1>Listing bookmarks</h1>
+<table>
+<% @bookmarks.each do |bookmark| %>
+  <tr>
+    <td><%= bookmark.Name %></td>
+    <td></td><td></td><td></td><td></td><td></td>
+    <td><%= link_to "#{bookmark.users.count}","/display/#{bookmark.id}" %></td>
+    <td></td><td></td><td></td><td></td><td></td>
+    <td><%= "#{bookmark.URL}"%></td>
+    <td></td><td></td>
+    <td><%= link_to 'Destroy', bookmark, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bookmark', new_bookmark_path %>

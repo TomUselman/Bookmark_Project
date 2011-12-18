@@ -1,0 +1,12 @@
+<header>
+  <nav class="round">
+    <ul>
+      <li><%= link_to "Home (Show Bookmarks)", bookmarks_path %></li>
+      <li><%= link_to "Image Upload", image_path %></li>
+      <li><%= link_to "Logout", signout_path, :method => :delete %></li>
+      <li><%= link_to "Profile", current_user %></li>
+      <li><%= link_to "Help", help_path %></li>
+      <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+    </ul>
+  </nav>
+</header>
