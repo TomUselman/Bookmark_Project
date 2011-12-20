@@ -1,5 +1,8 @@
 <h1>Account Details</h1>
 <% render 'form' %>
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @user.photo.url(:thumb) %>
 Username: <%= @user.username %>
 <br />
 Real Name: <%= @user.real_name %>

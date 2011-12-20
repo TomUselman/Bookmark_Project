@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111214222520) do
+ActiveRecord::Schema.define(:version => 20111220005055) do
 
   create_table "bookmarks", :force => true do |t|
     t.string   "URL"
@@ -37,6 +37,10 @@ ActiveRecord::Schema.define(:version => 20111214222520) do
     t.string   "real_name"
     t.string   "encrypted_password"
     t.string   "salt"
+    t.string   "avatar"
+    t.string   "photo_file_name"
+    t.string   "photo_content_type"
+    t.integer  "photo_file_size"
   end
 
   create_table "users_bookmarks", :force => true do |t|

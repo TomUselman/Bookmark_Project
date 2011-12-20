@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
   
   has_many :user_bookmarks
   has_many :bookmarks, :through => :user_bookmarks
-  
+  has_attached_file :photo,
+                  :url => "/images/:attachment/:id_:style.:extension",
+                  :path => ":rails_root/public/images/:attachment/:id_:style.:extension"  
   validates :password, :presence     => true,
                        :length       => { :within => 7..40 }
 
@@ -17,6 +19,7 @@ class User < ActiveRecord::Base
                         :length => { :within => 2..75 }
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
   validates_confirmation_of :password, :message => "Doesn't  match Confirmation"
+  validates_attachment_content_type :avatar, :content_type => 'image/jpeg'
 
   def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)
@@ -39,6 +42,11 @@ class User < ActiveRecord::Base
       self.salt = make_salt unless has_password?(password)
       self.encrypted_password = encrypt(password)
     end
+  end
+  
+  def set_avatar(uploaded_file)
+    self.avatar = Base64.encode64(uploaded_file.read)
+    self.save
   end
     private
     def encrypt(string)

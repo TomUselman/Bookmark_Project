@@ -1,1 +1,6 @@
 <h1>User Image Upload</h1>
+
+<% form_for :user, :html => { :multipart => true } do |f| %>
+  <%= f.file_field :photo%>
+<% end %>
+

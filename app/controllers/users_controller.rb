@@ -13,6 +13,10 @@ class UsersController < ApplicationController
   end
   
   def upload
+    user = User.first
+    File.open('photos/thumb/joker.jpg') { |photo_file| user.photo = photo_file }
+    user.save
+    redirect_to @user
   end
   
   def create
