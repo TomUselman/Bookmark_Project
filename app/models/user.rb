@@ -5,9 +5,9 @@ class User < ActiveRecord::Base
   
   has_many :user_bookmarks
   has_many :bookmarks, :through => :user_bookmarks
-  has_attached_file :photo, :styles => { :small => "150x150>" },
-                  :url  => "/images/thumbs/:id/:style/:basename.:extension",
-                  :path => ":rails_root/public/images/thumbs/:id/:style/:basename.:extension"
+  has_attached_file :photo,
+                  :url => "/images/:attachment/:id_:style.:extension",
+                  :path => ":rails_root/public/photos/thumb/:attachment/:id_:style.:extension"
 
 validates_attachment_presence :photo
 validates_attachment_size :photo, :less_than => 5.megabytes
@@ -47,6 +47,15 @@ validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image
       self.salt = make_salt unless has_password?(password)
       self.encrypted_password = encrypt(password)
     end
+  end
+  
+  def self.save_photo(upload)
+    name =  upload['datafile'].original_filename
+    directory = "public/photos"
+    # create the file path
+    path = File.join(directory, name)
+    # write the file
+    File.open(path, "wb") { |f| f.write(upload['datafile'].read) }
   end
   
   def set_avatar(uploaded_file)

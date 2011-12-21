@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe User do
+  
   before(:each) do
     @attr = { :real_name => "Example User", :username => "Example User", :email => "user@example.com", :password => "hotwheels", :password_confirmation => "hotwheels" }
   end
@@ -69,6 +70,15 @@ describe User do
 
     it "should have a bookmark attribute" do
       @user.should respond_to(:bookmarks)
+    end
+    
+    
+  end
+  
+  describe "avatar image" do
+    it "should have an avatar image on profile" do
+      get :show
+      response.should have_selector("img")
     end
   end
 end

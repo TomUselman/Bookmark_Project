@@ -13,10 +13,7 @@ class UsersController < ApplicationController
   end
   
   def upload_avatar
-    @user = User.find(params[:id])
-    p params
-    @user.set_avatar(params[:photo][:document])
-    redirect_to @user
+    
   end
   
   def create

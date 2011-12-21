@@ -42547,3 +42547,428 @@ ActionController::RoutingError (No route matches "/photos/small/missing.png"):
   
 
 Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 13:23:49 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (6.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header2.html.erb (1.9ms)
+Rendered users/show.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 133ms (Views: 19.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at 2011-12-21 13:23:49 -0600
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at 2011-12-21 13:23:50 -0600
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 13:23:52 -0600
+  Processing by UsersController#upload_avatar as HTML
+Completed 404 Not Found in 19ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:16:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (40.6ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.6ms)
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("bookmarks")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("user_bookmarks")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users_bookmarks")[0m
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 1[0m
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 13:33:09 -0600
+  Processing by UsersController#upload_avatar as HTML
+Completed 404 Not Found in 46ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:16:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.8ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 13:33:27 -0600
+  Processing by UsersController#upload_avatar as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb___190639305_82774700_575924197 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (2.0ms)
+Rendered users/upload_avatar.html.erb within layouts/application (127.6ms)
+Completed 200 OK in 137ms (Views: 135.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/upload" for 127.0.0.1 at 2011-12-21 13:33:36 -0600
+  Processing by UsersController#upload_avatar as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "avatar"=>{"uploaded_data"=>#<ActionDispatch::Http::UploadedFile:0xa057dc8 @original_filename="joker.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar[uploaded_data]\"; filename=\"joker.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20111221-5045-12k6yad>>}, "commit"=>"Upload"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb___190639305_86081430_575924197 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header2.html.erb (2.1ms)
+Rendered users/upload_avatar.html.erb within layouts/application (55.6ms)
+Completed 200 OK in 111ms (Views: 109.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 13:33:41 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (6.7ms)
+Rendered users/show.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 68ms
+
+ActionView::Template::Error (can't convert nil into String):
+    2: <% render 'form' %>
+    3: <p id="notice"><%= notice %></p>
+    4: 
+    5: <%= image_tag @user.photo.path %>
+    6: 
+    7: Username: <%= @user.username %>
+    8: <br />
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb__900666265_83344500_575924197'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 13:34:03 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (49.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (2.1ms)
+Rendered users/show.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 130ms (Views: 62.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at 2011-12-21 13:34:04 -0600
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at 2011-12-21 13:34:04 -0600
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 13:34:07 -0600
+  Processing by UsersController#upload_avatar as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb___190639305_85758500_575924197 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+  [1m[35mUser Load (1.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header2.html.erb (2.0ms)
+Rendered users/upload_avatar.html.erb within layouts/application (95.3ms)
+Completed 200 OK in 102ms (Views: 100.0ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/upload" for 127.0.0.1 at 2011-12-21 13:34:14 -0600
+  Processing by UsersController#upload_avatar as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "avatar"=>{"uploaded_data"=>#<ActionDispatch::Http::UploadedFile:0xa35ce60 @original_filename="joker.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar[uploaded_data]\"; filename=\"joker.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20111221-5045-1gkgd31>>}, "commit"=>"Upload"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb___190639305_85247270_575924197 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (2.3ms)
+Rendered users/upload_avatar.html.erb within layouts/application (90.1ms)
+Completed 200 OK in 94ms (Views: 92.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 13:35:36 -0600
+  Processing by UsersController#upload_avatar as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 87ms
+
+NoMethodError (undefined method `find' for #<User:0xa6de958>):
+  app/controllers/users_controller.rb:16:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 13:35:56 -0600
+  Processing by UsersController#upload_avatar as HTML
+Completed 500 Internal Server Error in 0ms
+
+ArgumentError (wrong number of arguments (1 for 0)):
+  app/helpers/sessions_helper.rb:20:in `current_user'
+  app/controllers/users_controller.rb:16:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.6ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (61.4ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 13:36:11 -0600
+  Processing by UsersController#upload_avatar as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 500 Internal Server Error in 47ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/users_controller.rb:18:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.4ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 13:36:52 -0600
+  Processing by UsersController#upload_avatar as HTML
+Completed 404 Not Found in 21ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:16:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /home/student/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 13:42:13 -0600
+  Processing by UsersController#upload_avatar as HTML
+Completed 404 Not Found in 210ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:16:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 13:42:19 -0600
+  Processing by UsersController#upload_avatar as HTML
+Completed 404 Not Found in 47ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:16:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 13:42:47 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (72.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (1.9ms)
+Rendered users/show.html.erb within layouts/application (122.9ms)
+Completed 200 OK in 243ms (Views: 127.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at 2011-12-21 13:42:47 -0600
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.7ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at 2011-12-21 13:42:47 -0600
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 13:42:49 -0600
+  Processing by UsersController#upload_avatar as HTML
+Completed 404 Not Found in 19ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:16:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.9ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 13:43:00 -0600
+  Processing by UsersController#upload_avatar as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb___579400179_88674350_926342992 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+  [1m[35mUser Load (3.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header2.html.erb (4.6ms)
+Rendered users/upload_avatar.html.erb within layouts/application (133.3ms)
+Completed 200 OK in 140ms (Views: 136.4ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/upload" for 127.0.0.1 at 2011-12-21 13:43:07 -0600
+  Processing by UsersController#upload_avatar as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "avatar"=>{"uploaded_data"=>#<ActionDispatch::Http::UploadedFile:0xa39736c @original_filename="joker.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar[uploaded_data]\"; filename=\"joker.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20111221-5262-1w1kb4f>>}, "commit"=>"Upload"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb___579400179_85745060_926342992 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (2.0ms)
+Rendered users/upload_avatar.html.erb within layouts/application (98.2ms)
+Completed 200 OK in 105ms (Views: 103.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/upload" for 127.0.0.1 at 2011-12-21 13:46:29 -0600
+  Processing by UsersController#upload_avatar as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "avatar"=>{"uploaded_data"=>#<ActionDispatch::Http::UploadedFile:0xa16c038 @original_filename="joker.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar[uploaded_data]\"; filename=\"joker.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20111221-5262-95v7kf>>}, "commit"=>"Upload"}
+Completed 500 Internal Server Error in 14ms
+
+NameError (uninitialized constant UsersController::DataFile):
+  app/controllers/users_controller.rb:17:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (8.3ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.5ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.1ms)
+
+
+Started POST "/upload" for 127.0.0.1 at 2011-12-21 13:49:17 -0600
+  Processing by UsersController#upload_avatar as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "avatar"=>{"uploaded_data"=>#<ActionDispatch::Http::UploadedFile:0xa9fae0c @original_filename="joker.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar[uploaded_data]\"; filename=\"joker.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20111221-5262-1xhl46i>>}, "commit"=>"Upload"}
+Completed 500 Internal Server Error in 16ms
+
+NameError (uninitialized constant UsersController::DataFile):
+  app/controllers/users_controller.rb:17:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (16.8ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.4ms)
+
+
+Started POST "/upload" for 127.0.0.1 at 2011-12-21 13:50:07 -0600
+  Processing by UsersController#upload_avatar as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "avatar"=>{"uploaded_data"=>#<ActionDispatch::Http::UploadedFile:0xa339104 @original_filename="joker.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar[uploaded_data]\"; filename=\"joker.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20111221-5262-1qzct5h>>}, "commit"=>"Upload"}
+Completed 500 Internal Server Error in 2ms
+
+NameError (undefined local variable or method `user' for #<UsersController:0xa3937f8>):
+  app/controllers/users_controller.rb:17:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.4ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.6ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (32.8ms)
+
+
+Started POST "/upload" for 127.0.0.1 at 2011-12-21 13:50:25 -0600
+  Processing by UsersController#upload_avatar as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "avatar"=>{"uploaded_data"=>#<ActionDispatch::Http::UploadedFile:0x935772c @original_filename="joker.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar[uploaded_data]\"; filename=\"joker.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20111221-5262-11zzkq>>}, "commit"=>"Upload"}
+Completed 404 Not Found in 168ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:16:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.5ms)
+
+
+Started POST "/upload" for 127.0.0.1 at 2011-12-21 13:51:45 -0600
+  Processing by UsersController#upload_avatar as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "avatar"=>{"uploaded_data"=>#<ActionDispatch::Http::UploadedFile:0xa4b2008 @original_filename="joker.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar[uploaded_data]\"; filename=\"joker.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20111221-5262-1pb1d0d>>}, "commit"=>"Upload"}
+Completed 404 Not Found in 50ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:16:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.4ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (22.3ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (36.5ms)
+
+
+Started POST "/upload" for 127.0.0.1 at 2011-12-21 14:00:12 -0600
+  Processing by UsersController#upload_avatar as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "avatar"=>{"uploaded_data"=>#<ActionDispatch::Http::UploadedFile:0x9650f8c @original_filename="joker.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar[uploaded_data]\"; filename=\"joker.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20111221-5262-tsefwo>>}, "commit"=>"Upload"}
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (undefined method `save_photo' for nil:NilClass):
+  app/controllers/users_controller.rb:17:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.4ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.9ms)
+
+
+Started POST "/upload" for 127.0.0.1 at 2011-12-21 14:12:15 -0600
+  Processing by UsersController#upload_avatar as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "avatar"=>{"uploaded_data"=>#<ActionDispatch::Http::UploadedFile:0xa905948 @original_filename="joker.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar[uploaded_data]\"; filename=\"joker.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20111221-5262-13rj3bj>>}, "commit"=>"Upload"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb___579400179_88459390_926342992 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header2.html.erb (2.6ms)
+Rendered users/upload_avatar.html.erb within layouts/application (233.1ms)
+Completed 200 OK in 240ms (Views: 238.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 14:12:18 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (6.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header2.html.erb (2.0ms)
+Rendered users/show.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 114ms (Views: 19.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at 2011-12-21 14:12:18 -0600
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at 2011-12-21 14:12:18 -0600
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)

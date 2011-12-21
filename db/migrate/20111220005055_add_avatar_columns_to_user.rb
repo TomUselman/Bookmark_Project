@@ -1,14 +1,12 @@
 class AddAvatarColumnsToUser < ActiveRecord::Migration
   def self.up
-    add_column :users, :photo_file_name, :string # Original filename
-    add_column :users, :photo_content_type, :string # Mime type
-    add_column :users, :photo_file_size, :integer # File size in bytes
+    change_table :users do |t|
+      t.has_attached_file :avatar
+    end
   end
 
   def self.down
-    remove_column :users, :photo_file_name
-    remove_column :users, :photo_content_type
-    remove_column :users, :photo_file_size
+    drop_attached_file :users, :avatar
   end
 
 
