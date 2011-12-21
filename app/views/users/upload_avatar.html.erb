@@ -1,0 +1,8 @@
+<h1>Upload a new avatar</h1>
+<% form_for(:avatar, :url => upload_path, :html => { :multipart => true }) do |f| %>
+  Select avatar:<br />
+  <%= f.file_field :uploaded_data %><br />
+  <br />
+  <%= submit_tag 'Upload' %>
+<% end %>
+

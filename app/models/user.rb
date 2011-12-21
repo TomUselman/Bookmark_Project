@@ -1,13 +1,21 @@
 require 'digest'
 class User < ActiveRecord::Base
-  attr_accessible :username, :real_name, :password, :email, :password_confirmation
+  attr_accessible :username, :real_name, :password, :email, :password_confirmation, :photo
   attr_accessor :password
   
   has_many :user_bookmarks
   has_many :bookmarks, :through => :user_bookmarks
   has_attached_file :photo,
-                  :url => "/images/:attachment/:id_:style.:extension",
-                  :path => ":rails_root/public/images/:attachment/:id_:style.:extension"  
+  :styles => {
+    :thumb=> "100x100#",
+    :small  => "150x150>",
+    :medium => "300x300>",
+    :large =>   "400x400>" }
+  
+  validates_attachment_presence :photo
+  validates_attachment_content_type :photo, :content_type => 'image/jpeg'
+
+
   validates :password, :presence     => true,
                        :length       => { :within => 7..40 }
 
@@ -19,7 +27,6 @@ class User < ActiveRecord::Base
                         :length => { :within => 2..75 }
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
   validates_confirmation_of :password, :message => "Doesn't  match Confirmation"
-  validates_attachment_content_type :avatar, :content_type => 'image/jpeg'
 
   def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)

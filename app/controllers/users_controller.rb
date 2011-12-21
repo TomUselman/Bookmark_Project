@@ -12,11 +12,21 @@ class UsersController < ApplicationController
     @title = @user.username
   end
   
-  def upload
-    user = User.first
-    File.open('photos/thumb/joker.jpg') { |photo_file| user.photo = photo_file }
-    user.save
-    redirect_to @user
+  def upload_avatar
+    if session[:user_id]
+      p params
+      @user = User.find(session[:user_id])
+      if params[:avatar]
+        @user.set_avatar(params[:avatar][:uploaded_data])
+        redirect_to @user
+      else
+respond_to do |format|
+format.html
+end
+      end
+    else
+      redirect_to root_path
+    end
   end
   
   def create

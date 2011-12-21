@@ -90,13 +90,12 @@ class BookmarksController < ApplicationController
   # DELETE /bookmarks/1.xml
   def destroy
     @bookmark = Bookmark.find(params[:id])
-    #if @bookmark.UserMade == current_user.username
-      @bookmark.destroy
-    #end
+    @user = User.find(session[:user_id])
+    @user.bookmarks.delete(@bookmark)
 
     respond_to do |format|
       format.html { redirect_to(bookmarks_url) }
-      format.xml  { head :ok }
+      format.xml { head :ok }
     end
   end
   
