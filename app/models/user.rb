@@ -5,15 +5,13 @@ class User < ActiveRecord::Base
   
   has_many :user_bookmarks
   has_many :bookmarks, :through => :user_bookmarks
-  has_attached_file :photo,
-  :styles => {
-    :thumb=> "100x100#",
-    :small  => "150x150>",
-    :medium => "300x300>",
-    :large =>   "400x400>" }
-  
-  validates_attachment_presence :photo
-  validates_attachment_content_type :photo, :content_type => 'image/jpeg'
+  has_attached_file :photo, :styles => { :small => "150x150>" },
+                  :url  => "/images/thumbs/:id/:style/:basename.:extension",
+                  :path => ":rails_root/public/images/thumbs/:id/:style/:basename.:extension"
+
+validates_attachment_presence :photo
+validates_attachment_size :photo, :less_than => 5.megabytes
+validates_attachment_content_type :photo, :content_type => ['image/jpeg', 'image/png']
 
 
   validates :password, :presence     => true,

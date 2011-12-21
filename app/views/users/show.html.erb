@@ -2,12 +2,8 @@
 <% render 'form' %>
 <p id="notice"><%= notice %></p>
 
-<% if @user.photo.exists? then %>
-<%= image_tag @user.photo.url %>
-<%= image_tag @user.photo.url(:thumb) %>
-<% else %>
-<p> There are no photo's attached, upload one. </p>
-<% end %>
+<%= image_tag @user.photo.url(:small) %>
+
 Username: <%= @user.username %>
 <br />
 Real Name: <%= @user.real_name %>

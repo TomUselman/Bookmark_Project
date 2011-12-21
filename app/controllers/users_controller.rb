@@ -13,20 +13,10 @@ class UsersController < ApplicationController
   end
   
   def upload_avatar
-    if session[:user_id]
-      p params
-      @user = User.find(session[:user_id])
-      if params[:avatar]
-        @user.set_avatar(params[:avatar][:uploaded_data])
-        redirect_to @user
-      else
-respond_to do |format|
-format.html
-end
-      end
-    else
-      redirect_to root_path
-    end
+    @user = User.find(params[:id])
+    p params
+    @user.set_avatar(params[:photo][:document])
+    redirect_to @user
   end
   
   def create
