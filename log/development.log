@@ -43747,3 +43747,393 @@ Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 15:03:43 -0600
 Rendered layouts/_header2.html.erb (2.3ms)
 Rendered bookmarks/index.html.erb within layouts/application (80.0ms)
 Completed 200 OK in 187ms (Views: 78.6ms | ActiveRecord: 6.4ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /home/student/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 15:18:43 -0600
+  Processing by SessionsController#new as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Redirected to http://localhost:3000/bookmarks
+Completed 302 Found in 290ms
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 15:18:43 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mBookmark Load (0.8ms)[0m  SELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 2))
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))[0m
+Rendered layouts/_header2.html.erb (2.0ms)
+Rendered bookmarks/index.html.erb within layouts/application (49.4ms)
+Completed 200 OK in 247ms (Views: 52.6ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/signout" for 127.0.0.1 at 2011-12-21 15:18:50 -0600
+  Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 15:18:50 -0600
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (0.9ms)
+Rendered sessions/new.html.erb within layouts/application (79.2ms)
+Completed 200 OK in 122ms (Views: 82.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-21 15:18:59 -0600
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "session"=>{"username"=>"bob", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = 'bob' LIMIT 1
+Redirected to http://localhost:3000/bookmarks
+Completed 302 Found in 104ms
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 15:18:59 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBookmark Load (0.9ms)[0m  SELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 1))
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))[0m
+Rendered layouts/_header2.html.erb (2.2ms)
+Rendered bookmarks/index.html.erb within layouts/application (57.5ms)
+Completed 200 OK in 197ms (Views: 65.6ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-12-21 15:19:04 -0600
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (5.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.5ms)
+Rendered layouts/_header2.html.erb (1.9ms)
+Rendered users/edit.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 109ms (Views: 16.2ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/signout" for 127.0.0.1 at 2011-12-21 15:19:09 -0600
+  Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 15:19:09 -0600
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (0.8ms)
+Rendered sessions/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 138ms (Views: 11.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-12-21 15:19:15 -0600
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/signin
+Completed 302 Found in 83ms
+
+
+Started GET "/signin" for 127.0.0.1 at 2011-12-21 15:19:15 -0600
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (1.0ms)
+Rendered sessions/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 119ms (Views: 16.8ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-21 15:19:24 -0600
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "session"=>{"username"=>"tom", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'tom' LIMIT 1[0m
+Redirected to http://localhost:3000/bookmarks
+Completed 302 Found in 87ms
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 15:19:25 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mBookmark Load (0.8ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 2))[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))
+Rendered layouts/_header2.html.erb (2.0ms)
+Rendered bookmarks/index.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 190ms (Views: 50.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/display/1" for 127.0.0.1 at 2011-12-21 15:19:29 -0600
+  Processing by BookmarksController#display as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookmark Load (2.6ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (2.6ms)[0m  SELECT "users".* FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (2.1ms)
+Rendered bookmarks/display.html.erb within layouts/application (126.2ms)
+Completed 200 OK in 188ms (Views: 126.2ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:19:37 -0600
+  Processing by UsersController#upload_avatar as HTML
+Completed 404 Not Found in 20ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:16:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-21 15:20:05 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered users/_form.html.erb (6.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (2.0ms)
+Rendered users/show.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 115ms (Views: 19.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-21 15:24:34 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered users/_form.html.erb (15.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (2.1ms)
+Rendered users/show.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 151ms (Views: 29.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:24:36 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to 
+Completed 500 Internal Server Error in 1ms
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/users_controller.rb:18:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.5ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:24:48 -0600
+  Processing by UsersController#upload_avatar as HTML
+Completed 500 Internal Server Error in 1ms
+
+NameError (undefined local variable or method `avatar_path' for #<UsersController:0xaf0ea24>):
+  app/controllers/users_controller.rb:18:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (47.2ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (52.2ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:15 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:15 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:15 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:15 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:15 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:15 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 44ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:15 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:15 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 6ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:15 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:16 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:16 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:16 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:16 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:16 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:16 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:16 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:16 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:16 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:16 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:16 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:17 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/upload
+Completed 302 Found in 1ms
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:30 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 15:25:30 -0600
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Redirected to http://localhost:3000/bookmarks
+Completed 302 Found in 130ms
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 15:25:30 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mBookmark Load (0.8ms)[0m  SELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 2))
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))[0m
+Rendered layouts/_header2.html.erb (2.0ms)
+Rendered bookmarks/index.html.erb within layouts/application (50.1ms)
+Completed 200 OK in 170ms (Views: 53.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:33 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 15:25:34 -0600
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Redirected to http://localhost:3000/bookmarks
+Completed 302 Found in 88ms
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 15:25:34 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mBookmark Load (1.1ms)[0m  SELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 2))
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))[0m
+Rendered layouts/_header2.html.erb (1.9ms)
+Rendered bookmarks/index.html.erb within layouts/application (48.4ms)
+Completed 200 OK in 152ms (Views: 50.9ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 15:25:51 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mBookmark Load (0.8ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 2))[0m
+  [1m[35mSQL (1.5ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))
+Rendered layouts/_header2.html.erb (2.0ms)
+Rendered bookmarks/index.html.erb within layouts/application (91.2ms)
+Completed 200 OK in 203ms (Views: 95.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:25:54 -0600
+  Processing by UsersController#upload_avatar as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb__431656059_90078860__970180855 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+  [1m[36mUser Load (6.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (1.9ms)
+Rendered users/upload_avatar.html.erb within layouts/application (104.5ms)
+Completed 200 OK in 114ms (Views: 107.4ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-21 15:25:59 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered users/_form.html.erb (7.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (2.2ms)
+Rendered users/show.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 108ms (Views: 19.8ms | ActiveRecord: 1.0ms)
