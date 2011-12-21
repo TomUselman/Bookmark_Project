@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(:version => 20111221001209) do
     t.string   "salt"
     t.string   "avatar"
     t.string   "photo_file_name"
+    t.string   "cover_image_uid"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
   end

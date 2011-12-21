@@ -2,6 +2,8 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.9'
 gem "paperclip", "~> 2.4"
+gem 'rack-cache', :require => 'rack/cache'
+gem 'dragonfly', '~>0.9.8'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

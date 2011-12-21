@@ -33,6 +33,8 @@ GEM
     builder (2.1.2)
     cocaine (0.2.1)
     diff-lcs (1.1.3)
+    dragonfly (0.9.8)
+      rack
     erubis (2.6.6)
       abstract (>= 1.0.0)
     factory_girl (1.3.3)
@@ -61,6 +63,8 @@ GEM
       mime-types
     polyglot (0.3.2)
     rack (1.2.3)
+    rack-cache (1.1)
+      rack (>= 0.4)
     rack-mount (0.6.14)
       rack (>= 1.0.0)
     rack-test (0.5.7)
@@ -116,9 +120,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dragonfly (~> 0.9.8)
   factory_girl_rails (= 1.0)
   heroku
   paperclip (~> 2.4)
+  rack-cache
   rails (= 3.0.9)
   rspec (= 2.3.0)
   rspec-rails (= 2.3.0)

@@ -42972,3 +42972,778 @@ ActionController::RoutingError (No route matches "/photos/small/missing.png"):
   
 
 Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 14:32:27 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (7.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header2.html.erb (1.9ms)
+Rendered users/show.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 134ms (Views: 20.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at 2011-12-21 14:32:28 -0600
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at 2011-12-21 14:32:28 -0600
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 14:32:31 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 14:32:31 -0600
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/bookmarks
+Completed 302 Found in 84ms
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 14:32:31 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mBookmark Load (0.8ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 1))[0m
+  [1m[35mSQL (1.5ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))
+Rendered layouts/_header2.html.erb (1.8ms)
+Rendered bookmarks/index.html.erb within layouts/application (51.8ms)
+Completed 200 OK in 179ms (Views: 53.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 14:32:45 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (7.0ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header2.html.erb (2.3ms)
+Rendered users/show.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 69ms (Views: 19.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at 2011-12-21 14:32:46 -0600
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/photos/small/missing.png" for 127.0.0.1 at 2011-12-21 14:32:46 -0600
+
+ActionController::RoutingError (No route matches "/photos/small/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+  [1m[36mSQL (1.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to AddPhotoToUser (20111221001209)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (126.7ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "username" varchar(255), "password" varchar(255), "email" varchar(255), "real_name" varchar(255), "encrypted_password" varchar(255), "salt" varchar(255), "avatar" varchar(255), "photo_file_name" varchar(255), "photo_content_type" varchar(255), "photo_file_size" integer) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.4ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35mSQL (0.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "username" varchar(255), "password" varchar(255), "email" varchar(255), "real_name" varchar(255), "encrypted_password" varchar(255), "salt" varchar(255), "avatar" varchar(255), "photo_content_type" varchar(255), "photo_file_size" integer) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("altered_users")[0m
+  [1m[35mSQL (0.3ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "username" varchar(255), "password" varchar(255), "email" varchar(255), "real_name" varchar(255), "encrypted_password" varchar(255), "salt" varchar(255), "avatar" varchar(255), "photo_content_type" varchar(255), "photo_file_size" integer) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.4ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35mSQL (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "username" varchar(255), "password" varchar(255), "email" varchar(255), "real_name" varchar(255), "encrypted_password" varchar(255), "salt" varchar(255), "avatar" varchar(255), "photo_file_size" integer) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("altered_users")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_users"
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "username" varchar(255), "password" varchar(255), "email" varchar(255), "real_name" varchar(255), "encrypted_password" varchar(255), "salt" varchar(255), "avatar" varchar(255), "photo_file_size" integer) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (1.1ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35mSQL (0.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "username" varchar(255), "password" varchar(255), "email" varchar(255), "real_name" varchar(255), "encrypted_password" varchar(255), "salt" varchar(255), "avatar" varchar(255)) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("altered_users")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_users"
+  [1m[36mAREL (0.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20111221001209'[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("bookmarks")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("user_bookmarks")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("users_bookmarks")
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateBookmarks (20110920053027)
+Migrating to ChangeDatesavedToDatetime (20110922012705)
+Migrating to CreateUsers (20111019211050)
+Migrating to AddEmailAndRealNameToUsers (20111019220436)
+Migrating to AddPasswordToUsers (20111121230124)
+Migrating to AddSaltToUsers (20111121230423)
+Migrating to AddUsertoBookmark (20111203102415)
+Migrating to CreateUsersBookmarks (20111214214939)
+Migrating to CreateUserBookmarks (20111214222520)
+Migrating to AddAvatarToUsers (20111220003133)
+Migrating to AddAvatarColumnsToUser (20111220005055)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.9ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (44.8ms)[0m  [1mCREATE TABLE "bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "URL" varchar(255), "Name" varchar(255), "created_at" datetime, "updated_at" datetime, "date_saved" datetime, "UserMade" varchar(255)) [0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (42.0ms)[0m  [1mCREATE TABLE "user_bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bookmark_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (20.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "username" varchar(255), "password" varchar(255), "email" varchar(255), "real_name" varchar(255), "encrypted_password" varchar(255), "salt" varchar(255), "avatar" varchar(255)) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (32.1ms)[0m  [1mCREATE TABLE "users_bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bookmark_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (19.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (19.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (16.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111220003133')
+  [1m[36mSQL (85.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111019211050')[0m
+  [1m[35mSQL (11.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111019220436')
+  [1m[36mSQL (15.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111203102415')[0m
+  [1m[35mSQL (15.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111214222520')
+  [1m[36mSQL (12.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110922012705')[0m
+  [1m[35mSQL (22.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110920053027')
+  [1m[36mSQL (23.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111121230423')[0m
+  [1m[35mSQL (10.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111214214939')
+  [1m[36mSQL (10.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111121230124')[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateBookmarks (20110920053027)
+Migrating to ChangeDatesavedToDatetime (20110922012705)
+Migrating to CreateUsers (20111019211050)
+Migrating to AddEmailAndRealNameToUsers (20111019220436)
+Migrating to AddPasswordToUsers (20111121230124)
+Migrating to AddSaltToUsers (20111121230423)
+Migrating to AddUsertoBookmark (20111203102415)
+Migrating to CreateUsersBookmarks (20111214214939)
+Migrating to CreateUserBookmarks (20111214222520)
+Migrating to AddAvatarToUsers (20111220003133)
+Migrating to AddAvatarColumnsToUser (20111220005055)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /home/student/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 14:41:40 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 404 Not Found in 221ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=1):
+  app/controllers/users_controller.rb:11:in `show'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.9ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 14:41:48 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 14:41:48 -0600
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header.html.erb (0.8ms)
+Rendered sessions/new.html.erb within layouts/application (123.8ms)
+Completed 200 OK in 199ms (Views: 127.8ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-21 14:41:59 -0600
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "session"=>{"username"=>"bob", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'bob' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header.html.erb (0.8ms)
+Rendered sessions/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 85ms (Views: 11.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-12-21 14:42:03 -0600
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header.html.erb (0.9ms)
+Rendered users/new.html.erb within layouts/application (144.4ms)
+Completed 200 OK in 216ms (Views: 152.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-12-21 14:42:25 -0600
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "user"=>{"real_name"=>"Bob The Builder", "photo"=>"joker.jpg", "username"=>"bob", "email"=>"bob@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 34ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: photo):
+  app/controllers/users_controller.rb:33:in `new'
+  app/controllers/users_controller.rb:33:in `create'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-12-21 14:42:48 -0600
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "user"=>{"real_name"=>"Bob The Builder", "photo"=>"joker.jpg", "username"=>"bob", "email"=>"bob@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+Completed 500 Internal Server Error in 92ms
+
+ActiveRecord::UnknownAttributeError (unknown attribute: photo):
+  app/controllers/users_controller.rb:33:in `new'
+  app/controllers/users_controller.rb:33:in `create'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.6ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-12-21 14:42:53 -0600
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header.html.erb (0.9ms)
+Rendered users/new.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 142ms (Views: 38.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-12-21 14:43:08 -0600
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "user"=>{"real_name"=>"Bob The Builder", "username"=>"bob", "email"=>"bob@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."username" = 'bob') LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username", "password", "email", "real_name", "encrypted_password", "salt", "avatar") VALUES ('2011-12-21 20:43:08.528246', '2011-12-21 20:43:08.528246', 'bob', NULL, 'bob@gmail.com', 'Bob The Builder', '83d297bcb457cc5e792763eda64eb690e09c3009b425650b22e454f7452cbf39', '450b570a3487f1d2ed4d15270c60a71d91a82a94790d142b22a76f8a0a4527bd', NULL)
+Redirected to http://localhost:3000/
+Completed 302 Found in 177ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 14:43:08 -0600
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/bookmarks
+Completed 302 Found in 46ms
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 14:43:08 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 1))[0m
+Rendered layouts/_header2.html.erb (2.5ms)
+Rendered bookmarks/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 134ms (Views: 30.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/bookmarks/new" for 127.0.0.1 at 2011-12-21 14:43:13 -0600
+  Processing by BookmarksController#new as HTML
+Rendered bookmarks/_form.html.erb (12.3ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header2.html.erb (2.0ms)
+Rendered bookmarks/new.html.erb within layouts/application (155.2ms)
+Completed 200 OK in 256ms (Views: 239.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/bookmarks" for 127.0.0.1 at 2011-12-21 14:43:21 -0600
+  Processing by BookmarksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "bookmark"=>{"URL"=>"www.yahoo.com", "Name"=>"", "date_saved(1i)"=>"2011", "date_saved(2i)"=>"12", "date_saved(3i)"=>"21", "date_saved(4i)"=>"20", "date_saved(5i)"=>"43"}, "commit"=>"Create Bookmark"}
+  [1m[36mBookmark Load (0.2ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."URL" = 'www.yahoo.com' LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "bookmarks" ("URL", "Name", "created_at", "updated_at", "date_saved", "UserMade") VALUES ('www.yahoo.com', NULL, '2011-12-21 20:43:21.246049', '2011-12-21 20:43:21.246049', NULL, NULL)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "user_bookmarks" ("bookmark_id", "user_id", "created_at", "updated_at") VALUES (1, 1, '2011-12-21 20:43:21.379519', '2011-12-21 20:43:21.379519')
+Redirected to http://localhost:3000/bookmarks/1
+Completed 302 Found in 186ms
+
+
+Started GET "/bookmarks/1" for 127.0.0.1 at 2011-12-21 14:43:21 -0600
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookmark Load (0.6ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header2.html.erb (2.1ms)
+Rendered bookmarks/show.html.erb within layouts/application (98.0ms)
+Completed 200 OK in 221ms (Views: 112.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 14:43:24 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBookmark Load (0.8ms)[0m  SELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 1))
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))[0m
+Rendered layouts/_header2.html.erb (1.8ms)
+Rendered bookmarks/index.html.erb within layouts/application (90.1ms)
+Completed 200 OK in 160ms (Views: 96.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/display/1" for 127.0.0.1 at 2011-12-21 14:43:31 -0600
+  Processing by BookmarksController#display as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBookmark Load (0.6ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header2.html.erb (1.9ms)
+Rendered bookmarks/display.html.erb within layouts/application (139.5ms)
+Completed 200 OK in 237ms (Views: 218.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/signout" for 127.0.0.1 at 2011-12-21 14:43:36 -0600
+  Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 14:43:36 -0600
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (0.8ms)
+Rendered sessions/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 79ms (Views: 21.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-12-21 14:43:39 -0600
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (0.8ms)
+Rendered users/new.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 59ms (Views: 37.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-12-21 14:43:53 -0600
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "user"=>{"real_name"=>"Tom", "username"=>"tom", "email"=>"tom@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM "users" WHERE ("users"."username" = 'tom') LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username", "password", "email", "real_name", "encrypted_password", "salt", "avatar") VALUES ('2011-12-21 20:43:54.071070', '2011-12-21 20:43:54.071070', 'tom', NULL, 'tom@gmail.com', 'Tom', 'a6d55e3876280639dc293a488bdc5a85e8b33525a78f8511e1b81b3f528bb028', 'e11a2d6ec34ec42808bb9c598219ca85296428bb14266ee4501b758d92470b81', NULL)[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 124ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 14:43:54 -0600
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Redirected to http://localhost:3000/bookmarks
+Completed 302 Found in 131ms
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 14:43:54 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[36mUser Load (5.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mBookmark Load (0.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 2))
+Rendered layouts/_header2.html.erb (1.9ms)
+Rendered bookmarks/index.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 135ms (Views: 26.5ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/bookmarks/new" for 127.0.0.1 at 2011-12-21 14:43:57 -0600
+  Processing by BookmarksController#new as HTML
+Rendered bookmarks/_form.html.erb (21.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (2.0ms)
+Rendered bookmarks/new.html.erb within layouts/application (107.6ms)
+Completed 200 OK in 143ms (Views: 111.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/bookmarks" for 127.0.0.1 at 2011-12-21 14:44:04 -0600
+  Processing by BookmarksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "bookmark"=>{"URL"=>"www.yahoo.com", "Name"=>"", "date_saved(1i)"=>"2011", "date_saved(2i)"=>"12", "date_saved(3i)"=>"21", "date_saved(4i)"=>"20", "date_saved(5i)"=>"43"}, "commit"=>"Create Bookmark"}
+  [1m[35mBookmark Load (0.7ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."URL" = 'www.yahoo.com' LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "user_bookmarks" ("bookmark_id", "user_id", "created_at", "updated_at") VALUES (1, 2, '2011-12-21 20:44:04.263668', '2011-12-21 20:44:04.263668')
+Redirected to http://localhost:3000/bookmarks/1
+Completed 302 Found in 419ms
+
+
+Started GET "/bookmarks/1" for 127.0.0.1 at 2011-12-21 14:44:04 -0600
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBookmark Load (0.6ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered layouts/_header2.html.erb (2.1ms)
+Rendered bookmarks/show.html.erb within layouts/application (107.3ms)
+Completed 200 OK in 165ms (Views: 110.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 14:44:08 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mBookmark Load (0.8ms)[0m  SELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 2))
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))[0m
+Rendered layouts/_header2.html.erb (1.8ms)
+Rendered bookmarks/index.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 151ms (Views: 50.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/display/1" for 127.0.0.1 at 2011-12-21 14:44:10 -0600
+  Processing by BookmarksController#display as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBookmark Load (0.7ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = 1 LIMIT 1
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered layouts/_header2.html.erb (2.3ms)
+Rendered bookmarks/display.html.erb within layouts/application (118.6ms)
+Completed 200 OK in 150ms (Views: 125.6ms | ActiveRecord: 2.3ms)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateBookmarks (20110920053027)
+Migrating to ChangeDatesavedToDatetime (20110922012705)
+Migrating to CreateUsers (20111019211050)
+Migrating to AddEmailAndRealNameToUsers (20111019220436)
+Migrating to AddPasswordToUsers (20111121230124)
+Migrating to AddSaltToUsers (20111121230423)
+Migrating to AddUsertoBookmark (20111203102415)
+Migrating to CreateUsersBookmarks (20111214214939)
+Migrating to CreateUserBookmarks (20111214222520)
+Migrating to AddAvatarToUsers (20111220003133)
+Migrating to AddAvatarColumnsToUser (20111220005055)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (1.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateBookmarks (20110920053027)
+Migrating to ChangeDatesavedToDatetime (20110922012705)
+Migrating to CreateUsers (20111019211050)
+Migrating to AddEmailAndRealNameToUsers (20111019220436)
+Migrating to AddPasswordToUsers (20111121230124)
+Migrating to AddSaltToUsers (20111121230423)
+Migrating to AddUsertoBookmark (20111203102415)
+Migrating to CreateUsersBookmarks (20111214214939)
+Migrating to CreateUserBookmarks (20111214222520)
+Migrating to AddAvatarToUsers (20111220003133)
+Migrating to AddAvatarColumnsToUser (20111220005055)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (1.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("bookmarks")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("user_bookmarks")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users_bookmarks")[0m
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateBookmarks (20110920053027)
+Migrating to ChangeDatesavedToDatetime (20110922012705)
+Migrating to CreateUsers (20111019211050)
+Migrating to AddEmailAndRealNameToUsers (20111019220436)
+Migrating to AddPasswordToUsers (20111121230124)
+Migrating to AddSaltToUsers (20111121230423)
+Migrating to AddUsertoBookmark (20111203102415)
+Migrating to CreateUsersBookmarks (20111214214939)
+Migrating to CreateUserBookmarks (20111214222520)
+Migrating to AddAvatarToUsers (20111220003133)
+Migrating to AddPhotoToUser (20111221001209)
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.6ms)[0m  [1mALTER TABLE "users" ADD "photo_file_name" varchar(255)[0m
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "users" ADD "cover_image_uid" varchar(255)
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "users" ADD "photo_content_type" varchar(255)[0m
+  [1m[35mSQL (0.1ms)[0m  ALTER TABLE "users" ADD "photo_file_size" integer
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111221001209')[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("bookmarks")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("user_bookmarks")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users_bookmarks")
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /home/student/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 14:52:18 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mBookmark Load (0.8ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 2))[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))
+Rendered layouts/_header2.html.erb (2.0ms)
+Rendered bookmarks/index.html.erb within layouts/application (47.0ms)
+Completed 200 OK in 399ms (Views: 49.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 14:52:21 -0600
+  Processing by UsersController#upload_avatar as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 14:52:21 -0600
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Redirected to http://localhost:3000/bookmarks
+Completed 302 Found in 124ms
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 14:52:21 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mBookmark Load (0.9ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 2))[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))
+Rendered layouts/_header2.html.erb (1.9ms)
+Rendered bookmarks/index.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 145ms (Views: 49.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 14:52:47 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mBookmark Load (0.8ms)[0m  SELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 2))
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))[0m
+Rendered layouts/_header2.html.erb (1.9ms)
+Rendered bookmarks/index.html.erb within layouts/application (76.4ms)
+Completed 200 OK in 210ms (Views: 79.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 14:52:49 -0600
+  Processing by UsersController#upload_avatar as HTML
+Rendered users/upload_avatar.html.erb within layouts/application (40.8ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: <h1>Upload a new avatar</h1>
+    2: <% form_for @user, :html => {:multipart => true} do |f| %>
+    3:   Select avatar:<br />
+    4:   <%= f.file_field :cover_image %>
+    5:   <br />
+  app/views/users/upload_avatar.html.erb:2:in `_app_views_users_upload_avatar_html_erb__123212406_94935110_671194705'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 14:53:57 -0600
+  Processing by UsersController#upload_avatar as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb__123212406_98292930_671194705 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered layouts/_header2.html.erb (2.1ms)
+Rendered users/upload_avatar.html.erb within layouts/application (109.6ms)
+Completed 200 OK in 127ms (Views: 125.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/upload" for 127.0.0.1 at 2011-12-21 14:54:05 -0600
+  Processing by UsersController#upload_avatar as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "avatar"=>{"cover_image"=>#<ActionDispatch::Http::UploadedFile:0xb25bb64 @original_filename="joker.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar[cover_image]\"; filename=\"joker.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20111221-5651-c5ddjg>>}, "commit"=>"Upload"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb__123212406_93447100_671194705 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (2.3ms)
+Rendered users/upload_avatar.html.erb within layouts/application (92.7ms)
+Completed 200 OK in 100ms (Views: 98.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-21 14:54:14 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (3.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered users/_form.html.erb (78.5ms)
+Rendered users/show.html.erb within layouts/application (81.4ms)
+Completed 500 Internal Server Error in 173ms
+
+ActionView::Template::Error (undefined method `thumb' for nil:NilClass):
+    2: <% render 'form' %>
+    3: <p id="notice"><%= notice %></p>
+    4: 
+    5: <%= image_tag @user.cover_image.thumb('400x200#').url %>
+    6: 
+    7: Username: <%= @user.username %>
+    8: <br />
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb___127826180_98748230_671194705'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-21 14:59:10 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered users/_form.html.erb (7.0ms)
+Rendered users/show.html.erb within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 61ms
+
+ActionView::Template::Error (undefined method `thumb' for nil:NilClass):
+    2: <% render 'form' %>
+    3: <p id="notice"><%= notice %></p>
+    4: 
+    5: <%= image_tag @user.cover_image.thumb('400x200#').url %>
+    6: 
+    7: Username: <%= @user.username %>
+    8: <br />
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb___127826180_92821380_671194705'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (33.6ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (46.6ms)
+
+
+Started POST "/upload" for 127.0.0.1 at 2011-12-21 14:59:22 -0600
+  Processing by UsersController#upload_avatar as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F6YOQWktcnKD3xgtvGShg0KWZwGoHFfy7D1ET6CdRqI=", "avatar"=>{"cover_image"=>#<ActionDispatch::Http::UploadedFile:0xbc98d98 @original_filename="joker.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar[cover_image]\"; filename=\"joker.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20111221-5651-8thts8>>}, "commit"=>"Upload"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb__123212406_98751330_671194705 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+  [1m[35mUser Load (6.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered layouts/_header2.html.erb (1.9ms)
+Rendered users/upload_avatar.html.erb within layouts/application (207.4ms)
+Completed 200 OK in 217ms (Views: 210.5ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-21 14:59:26 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered users/_form.html.erb (7.1ms)
+Rendered users/show.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 206ms
+
+ActionView::Template::Error (undefined method `thumb' for nil:NilClass):
+    2: <% render 'form' %>
+    3: <p id="notice"><%= notice %></p>
+    4: 
+    5: <%= image_tag @user.cover_image.thumb('400x200#').url %>
+    6: 
+    7: Username: <%= @user.username %>
+    8: <br />
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb___127826180_99166520_671194705'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (9.4ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-21 15:03:31 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (6.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered users/_form.html.erb (7.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (1.7ms)
+Rendered users/show.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 127ms (Views: 19.0ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:03:37 -0600
+  Processing by UsersController#upload_avatar as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb__123212406_90194560_671194705 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+  [1m[35mUser Load (6.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered layouts/_header2.html.erb (2.1ms)
+Rendered users/upload_avatar.html.erb within layouts/application (106.9ms)
+Completed 200 OK in 116ms (Views: 109.8ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-21 15:03:40 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered users/_form.html.erb (6.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered layouts/_header2.html.erb (1.9ms)
+Rendered users/show.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 101ms (Views: 22.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 15:03:43 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mBookmark Load (5.2ms)[0m  SELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 2))
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))[0m
+Rendered layouts/_header2.html.erb (2.3ms)
+Rendered bookmarks/index.html.erb within layouts/application (80.0ms)
+Completed 200 OK in 187ms (Views: 78.6ms | ActiveRecord: 6.4ms)
