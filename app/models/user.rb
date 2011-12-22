@@ -1,14 +1,21 @@
 require 'digest'
 class User < ActiveRecord::Base
-  attr_accessible :username, :real_name, :password, :email, :password_confirmation, :photo
+  attr_accessible :username, :real_name, :password, :email, :password_confirmation, :photo, :avatar
   attr_accessor :password
   
   has_many :user_bookmarks
   has_many :bookmarks, :through => :user_bookmarks
   
-  has_attached_file :photo
-  
-  image_accessor :cover_image
+   has_attached_file :photo,
+    
+    :url => "/images/:piece_id/:basename_:style.:extension",
+    :path => ":rails_root/public/images/:piece_id/:basename_:style.:extension",
+
+    :styles => {
+      :tiny => "50x50>",
+      :thumb => "100x100>",
+      :original => "400x400>"
+    }
 
 
   validates :password, :presence     => true,
@@ -46,19 +53,11 @@ class User < ActiveRecord::Base
     end
   end
   
-  def self.save_photo(upload)
-    name =  upload['datafile'].original_filename
-    directory = "public/photos"
-    # create the file path
-    path = File.join(directory, name)
-    # write the file
-    File.open(path, "wb") { |f| f.write(upload['datafile'].read) }
-  end
-  
   def set_avatar(uploaded_file)
     self.avatar = Base64.encode64(uploaded_file.read)
     self.save
   end
+    
     private
     def encrypt(string)
       secure_hash("#{salt}--#{string}")

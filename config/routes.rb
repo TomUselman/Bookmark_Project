@@ -10,7 +10,7 @@ BookmarkProject1::Application.routes.draw do
   
   match "/login" => "users#show"
   match "/display/:id" => "bookmarks#display"
-  match '/upload'          => 'users#upload_avatar'
+  match '/upload_avatar'          => 'users#upload_avatar'
   match "/logout" => "users#logout"
   match "/edit" => "users#edit"
   match "/help" => "users#help"

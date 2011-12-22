@@ -44137,3 +44137,1151 @@ Rendered users/_form.html.erb (7.2ms)
 Rendered layouts/_header2.html.erb (2.2ms)
 Rendered users/show.html.erb within layouts/application (16.1ms)
 Completed 200 OK in 108ms (Views: 19.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-21 15:31:05 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered users/_form.html.erb (13.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (1.8ms)
+Rendered users/show.html.erb within layouts/application (22.4ms)
+Completed 200 OK in 145ms (Views: 28.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:31:07 -0600
+  Processing by UsersController#upload_avatar as HTML
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed 500 Internal Server Error in 70ms
+
+NoMethodError (undefined method `save' for #<Class:0xa576fac>):
+  app/controllers/users_controller.rb:19:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.1ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:31:30 -0600
+  Processing by UsersController#upload_avatar as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed 500 Internal Server Error in 48ms
+
+NoMethodError (undefined method `set_avatar' for #<Class:0xac75a38>):
+  app/controllers/users_controller.rb:19:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.6ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:31:44 -0600
+  Processing by UsersController#upload_avatar as HTML
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed 500 Internal Server Error in 77ms
+
+NoMethodError (undefined method `set_avatar' for #<Class:0xaff3f98>):
+  app/controllers/users_controller.rb:19:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.3ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:31:50 -0600
+  Processing by UsersController#upload_avatar as HTML
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed 500 Internal Server Error in 65ms
+
+NoMethodError (undefined method `set_avatar' for #<Class:0xa936aac>):
+  app/controllers/users_controller.rb:19:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (13.5ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:32:17 -0600
+  Processing by UsersController#upload_avatar as HTML
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (undefined method `set_avatar' for nil:NilClass):
+  app/controllers/users_controller.rb:19:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:34:09 -0600
+  Processing by UsersController#upload_avatar as HTML
+Completed 404 Not Found in 42ms
+
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  app/controllers/users_controller.rb:19:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.5ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.4ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:35:03 -0600
+  Processing by UsersController#upload_avatar as HTML
+Completed 500 Internal Server Error in 7ms
+
+NameError (undefined local variable or method `user_bookmarks' for #<UsersController:0xaf9a2a4>):
+  app/controllers/users_controller.rb:19:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.0ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:40:35 -0600
+  Processing by UsersController#upload_avatar as HTML
+Rendered text template (0.0ms)
+Completed 200 OK in 129ms (Views: 128.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:40:42 -0600
+  Processing by UsersController#upload_avatar as HTML
+Rendered text template (0.0ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 15:40:56 -0600
+  Processing by UsersController#upload_avatar as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb__431656059_83601510__970180855 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered layouts/_header2.html.erb (2.0ms)
+Rendered users/upload_avatar.html.erb within layouts/application (122.8ms)
+Completed 200 OK in 127ms (Views: 125.7ms | ActiveRecord: 1.2ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /home/student/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 17:57:25 -0600
+  Processing by SessionsController#new as HTML
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered sessions/new.html.erb within layouts/application (310.9ms)
+Completed 200 OK in 1219ms (Views: 488.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-12-21 17:57:33 -0600
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered users/new.html.erb within layouts/application (55.9ms)
+Completed 200 OK in 126ms (Views: 110.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-12-21 17:57:48 -0600
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qsxJCSxcGVRAj+xFEYMa9PyF9aaNyRFpyT7wag5+Rek=", "user"=>{"real_name"=>"some name", "username"=>"nameless", "email"=>"name@yahoo.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."username" = 'nameless') LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username", "password", "email", "real_name", "encrypted_password", "salt", "avatar", "photo_file_name", "cover_image_uid", "photo_content_type", "photo_file_size") VALUES ('2011-12-21 23:57:49.022554', '2011-12-21 23:57:49.022554', 'nameless', NULL, 'name@yahoo.com', 'some name', '93ce612b7771de40d0846fddee4a8a2dfe646341684bf5f78352c7259dcea12d', 'c03dda2b87d70d130fb9f7bd805ee0abc9cb90653e656549470373f9741b55ab', NULL, NULL, NULL, NULL, NULL)
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/
+Completed 302 Found in 193ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 17:57:49 -0600
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Redirected to http://localhost:3000/bookmarks
+Completed 302 Found in 28ms
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 17:57:49 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 3))[0m
+Rendered layouts/_header2.html.erb (1.3ms)
+Rendered bookmarks/index.html.erb within layouts/application (34.0ms)
+Completed 200 OK in 117ms (Views: 44.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/bookmarks/new" for 127.0.0.1 at 2011-12-21 17:57:59 -0600
+  Processing by BookmarksController#new as HTML
+Rendered bookmarks/_form.html.erb (7.8ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered layouts/_header2.html.erb (1.3ms)
+Rendered bookmarks/new.html.erb within layouts/application (60.3ms)
+Completed 200 OK in 139ms (Views: 125.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/bookmarks" for 127.0.0.1 at 2011-12-21 17:58:10 -0600
+  Processing by BookmarksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qsxJCSxcGVRAj+xFEYMa9PyF9aaNyRFpyT7wag5+Rek=", "bookmark"=>{"URL"=>"www.youtube.com", "Name"=>"", "date_saved(1i)"=>"2011", "date_saved(2i)"=>"12", "date_saved(3i)"=>"21", "date_saved(4i)"=>"23", "date_saved(5i)"=>"58"}, "commit"=>"Create Bookmark"}
+  [1m[36mBookmark Load (0.1ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."URL" = 'www.youtube.com' LIMIT 1[0m
+  [1m[35mAREL (1.8ms)[0m  INSERT INTO "bookmarks" ("URL", "Name", "created_at", "updated_at", "date_saved", "UserMade") VALUES ('www.youtube.com', NULL, '2011-12-21 23:58:10.594184', '2011-12-21 23:58:10.594184', NULL, NULL)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mAREL (0.1ms)[0m  INSERT INTO "user_bookmarks" ("bookmark_id", "user_id", "created_at", "updated_at") VALUES (2, 3, '2011-12-21 23:58:10.676798', '2011-12-21 23:58:10.676798')
+Redirected to http://localhost:3000/bookmarks/2
+Completed 302 Found in 111ms
+
+
+Started GET "/bookmarks/2" for 127.0.0.1 at 2011-12-21 17:58:10 -0600
+  Processing by BookmarksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = 2 LIMIT 1[0m
+  [1m[35mUser Load (16.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered layouts/_header2.html.erb (1.4ms)
+Rendered bookmarks/show.html.erb within layouts/application (54.6ms)
+Completed 200 OK in 112ms (Views: 85.7ms | ActiveRecord: 19.0ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 17:58:14 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mBookmark Load (0.5ms)[0m  SELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 3))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 2))[0m
+Rendered layouts/_header2.html.erb (1.2ms)
+Rendered bookmarks/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 86ms (Views: 28.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/display/2" for 127.0.0.1 at 2011-12-21 17:58:17 -0600
+  Processing by BookmarksController#display as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = 2 LIMIT 1
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 2))[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered layouts/_header2.html.erb (1.3ms)
+Rendered bookmarks/display.html.erb within layouts/application (64.3ms)
+Completed 200 OK in 162ms (Views: 130.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 17:58:25 -0600
+  Processing by UsersController#upload_avatar as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb___604700252_79458930__649523014 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (1.4ms)
+Rendered users/upload_avatar.html.erb within layouts/application (48.6ms)
+Completed 200 OK in 71ms (Views: 70.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2011-12-21 17:58:29 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Rendered users/_form.html.erb (4.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (1.1ms)
+Rendered users/show.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 169ms (Views: 123.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/signout" for 127.0.0.1 at 2011-12-21 17:58:33 -0600
+  Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qsxJCSxcGVRAj+xFEYMa9PyF9aaNyRFpyT7wag5+Rek="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 17:58:33 -0600
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 26ms (Views: 6.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-21 17:58:38 -0600
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qsxJCSxcGVRAj+xFEYMa9PyF9aaNyRFpyT7wag5+Rek=", "session"=>{"username"=>"bob", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = 'bob' LIMIT 1
+Redirected to http://localhost:3000/bookmarks
+Completed 302 Found in 51ms
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 17:58:38 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBookmark Load (0.5ms)[0m  SELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 1))
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))[0m
+Rendered layouts/_header2.html.erb (1.2ms)
+Rendered bookmarks/index.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 100ms (Views: 45.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/display/1" for 127.0.0.1 at 2011-12-21 17:58:43 -0600
+  Processing by BookmarksController#display as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT "bookmarks".* FROM "bookmarks" WHERE "bookmarks"."id" = 1 LIMIT 1
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header2.html.erb (1.3ms)
+Rendered bookmarks/display.html.erb within layouts/application (66.6ms)
+Completed 200 OK in 82ms (Views: 66.7ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/signout" for 127.0.0.1 at 2011-12-21 17:58:49 -0600
+  Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qsxJCSxcGVRAj+xFEYMa9PyF9aaNyRFpyT7wag5+Rek="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 0ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 17:58:49 -0600
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+Rendered layouts/_header.html.erb (0.4ms)
+Rendered sessions/new.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 31ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /home/student/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 21:02:21 -0600
+  Processing by SessionsController#new as HTML
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered sessions/new.html.erb within layouts/application (71.9ms)
+Completed 200 OK in 477ms (Views: 127.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 21:04:36 -0600
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered sessions/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 30ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-21 21:04:41 -0600
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j0Gyauo55zN99dSp87QPEgiAeBxQXLTCXlEgkrv2iSM=", "session"=>{"username"=>"bob", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = 'bob' LIMIT 1
+Redirected to http://localhost:3000/bookmarks
+Completed 302 Found in 149ms
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 21:04:41 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBookmark Load (0.5ms)[0m  SELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 1))
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" INNER JOIN "user_bookmarks" ON "users".id = "user_bookmarks".user_id WHERE (("user_bookmarks".bookmark_id = 1))[0m
+Rendered layouts/_header2.html.erb (1.5ms)
+Rendered bookmarks/index.html.erb within layouts/application (71.1ms)
+Completed 200 OK in 201ms (Views: 91.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 21:04:45 -0600
+  Processing by UsersController#upload_avatar as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb___345888521_80711580__833371582 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header2.html.erb (1.5ms)
+Rendered users/upload_avatar.html.erb within layouts/application (55.9ms)
+Completed 200 OK in 140ms (Views: 139.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/upload" for 127.0.0.1 at 2011-12-21 21:05:12 -0600
+  Processing by UsersController#upload_avatar as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j0Gyauo55zN99dSp87QPEgiAeBxQXLTCXlEgkrv2iSM=", "user"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x9ad790c @original_filename="joker.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"joker.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20111221-8127-iw30zw>>}, "commit"=>"Upload"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb___345888521_81007760__833371582 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (1.5ms)
+Rendered users/upload_avatar.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 61ms (Views: 60.2ms | ActiveRecord: 0.8ms)
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+Migrating to CreateBookmarks (20110920053027)
+Migrating to ChangeDatesavedToDatetime (20110922012705)
+Migrating to CreateUsers (20111019211050)
+Migrating to AddEmailAndRealNameToUsers (20111019220436)
+Migrating to AddPasswordToUsers (20111121230124)
+Migrating to AddSaltToUsers (20111121230423)
+Migrating to AddUsertoBookmark (20111203102415)
+Migrating to CreateUsersBookmarks (20111214214939)
+Migrating to CreateUserBookmarks (20111214222520)
+Migrating to AddAvatarToUsers (20111220003133)
+Migrating to AddPhotoToUser (20111221001209)
+Migrating to AddAttachmentPhotoToUser (20111222030952)
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (0.1ms)[0m  [1mALTER TABLE "users" ADD "photo_file_name" varchar(255)[0m
+SQLite3::SQLException: duplicate column name: photo_file_name: ALTER TABLE "users" ADD "photo_file_name" varchar(255)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (108.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (13.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateBookmarks (20110920053027)
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE TABLE "bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "URL" varchar(255), "Name" varchar(255), "DateSaved" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110920053027')
+Migrating to ChangeDatesavedToDatetime (20110922012705)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "altered_bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "URL" varchar(255), "Name" varchar(255), "DateSaved" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("bookmarks")
+  [1m[36mSQL (0.1ms)[0m  [1mDROP TABLE "bookmarks"[0m
+  [1m[35mSQL (0.1ms)[0m  CREATE TABLE "bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "URL" varchar(255), "Name" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("altered_bookmarks")[0m
+  [1m[35mSQL (0.2ms)[0m  DROP TABLE "altered_bookmarks"
+  [1m[36mSQL (0.1ms)[0m  [1mALTER TABLE "bookmarks" ADD "date_saved" datetime[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110922012705')
+Migrating to CreateUsers (20111019211050)
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime, "username" varchar(255), "password" varchar(255)) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111019211050')
+Migrating to AddEmailAndRealNameToUsers (20111019220436)
+  [1m[36mSQL (0.2ms)[0m  [1mALTER TABLE "users" ADD "email" varchar(255)[0m
+  [1m[35mSQL (0.1ms)[0m  ALTER TABLE "users" ADD "real_name" varchar(255)
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111019220436')[0m
+Migrating to AddPasswordToUsers (20111121230124)
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "users" ADD "encrypted_password" varchar(255)
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111121230124')[0m
+Migrating to AddSaltToUsers (20111121230423)
+  [1m[35mSQL (0.3ms)[0m  ALTER TABLE "users" ADD "salt" varchar(255)
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111121230423')[0m
+Migrating to AddUsertoBookmark (20111203102415)
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "bookmarks" ADD "UserMade" varchar(255)
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111203102415')[0m
+Migrating to CreateUsersBookmarks (20111214214939)
+  [1m[35mSQL (0.2ms)[0m  CREATE TABLE "users_bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bookmark_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111214214939')[0m
+Migrating to CreateUserBookmarks (20111214222520)
+  [1m[35mSQL (0.3ms)[0m  CREATE TABLE "user_bookmarks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bookmark_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20111214222520')[0m
+Migrating to AddAttachmentPhotoToUser (20111222031138)
+  [1m[35mSQL (0.2ms)[0m  ALTER TABLE "users" ADD "photo_file_name" varchar(255)
+  [1m[36mSQL (0.1ms)[0m  [1mALTER TABLE "users" ADD "photo_content_type" varchar(255)[0m
+  [1m[35mSQL (0.1ms)[0m  ALTER TABLE "users" ADD "photo_file_size" integer
+  [1m[36mSQL (0.1ms)[0m  [1mALTER TABLE "users" ADD "photo_updated_at" datetime[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111222031138')
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("bookmarks")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("user_bookmarks")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users_bookmarks")[0m
+
+
+Started POST "/upload" for 127.0.0.1 at 2011-12-21 21:12:22 -0600
+  Processing by UsersController#upload_avatar as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j0Gyauo55zN99dSp87QPEgiAeBxQXLTCXlEgkrv2iSM=", "user"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x9893e20 @original_filename="joker.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"joker.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20111221-8127-17i3g6v>>}, "commit"=>"Upload"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb___345888521_79315470__833371582 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered users/upload_avatar.html.erb within layouts/application (51.7ms)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/upload" for 127.0.0.1 at 2011-12-21 21:13:05 -0600
+  Processing by UsersController#upload_avatar as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j0Gyauo55zN99dSp87QPEgiAeBxQXLTCXlEgkrv2iSM=", "user"=>{"avatar"=>#<ActionDispatch::Http::UploadedFile:0x9a8be80 @original_filename="joker.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"joker.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20111221-8127-szywmr>>}, "commit"=>"Upload"}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb___345888521_80713200__833371582 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:1)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header.html.erb (0.7ms)
+Rendered users/upload_avatar.html.erb within layouts/application (51.3ms)
+Completed 200 OK in 54ms (Views: 53.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 21:13:12 -0600
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered sessions/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 51ms (Views: 6.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-21 21:13:17 -0600
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j0Gyauo55zN99dSp87QPEgiAeBxQXLTCXlEgkrv2iSM=", "session"=>{"username"=>"bob", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = 'bob' LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header.html.erb (0.5ms)
+Rendered sessions/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 50ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-12-21 21:13:26 -0600
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered users/new.html.erb within layouts/application (64.7ms)
+Completed 200 OK in 157ms (Views: 136.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-12-21 21:13:36 -0600
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j0Gyauo55zN99dSp87QPEgiAeBxQXLTCXlEgkrv2iSM=", "user"=>{"real_name"=>"Bob", "username"=>"bob", "email"=>"bob@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."username" = 'bob') LIMIT 1[0m
+Completed 500 Internal Server Error in 72ms
+
+NoMethodError (undefined method `cover_image_uid' for #<User:0x9647bbc>):
+  app/controllers/users_controller.rb:22:in `create'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-12-21 21:15:23 -0600
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j0Gyauo55zN99dSp87QPEgiAeBxQXLTCXlEgkrv2iSM=", "user"=>{"real_name"=>"Bob", "username"=>"bob", "email"=>"bob@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM "users" WHERE ("users"."username" = 'bob') LIMIT 1
+Completed 500 Internal Server Error in 50ms
+
+NoMethodError (undefined method `cover_image_uid' for #<User:0x959fd04>):
+  app/controllers/users_controller.rb:22:in `create'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.8ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-12-21 21:21:56 -0600
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/student/rails_projects/Bookmark_Project/app/controllers/application_controller.rb:1)
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j0Gyauo55zN99dSp87QPEgiAeBxQXLTCXlEgkrv2iSM=", "user"=>{"real_name"=>"Bob", "username"=>"bob", "email"=>"bob@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."username" = 'bob') LIMIT 1[0m
+Completed 500 Internal Server Error in 241ms
+
+NoMethodError (undefined method `cover_image_uid' for #<User:0x9a1f244>):
+  app/controllers/users_controller.rb:22:in `create'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-12-21 21:23:05 -0600
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j0Gyauo55zN99dSp87QPEgiAeBxQXLTCXlEgkrv2iSM=", "user"=>{"real_name"=>"Bob", "username"=>"bob", "email"=>"bob@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM "users" WHERE ("users"."username" = 'bob') LIMIT 1
+Completed 500 Internal Server Error in 31ms
+
+NoMethodError (undefined method `cover_image_uid' for #<User:0x997d674>):
+  app/controllers/users_controller.rb:22:in `create'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.9ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-12-21 21:24:46 -0600
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/student/rails_projects/Bookmark_Project/app/controllers/application_controller.rb:1)
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j0Gyauo55zN99dSp87QPEgiAeBxQXLTCXlEgkrv2iSM=", "user"=>{"real_name"=>"Bob", "username"=>"bob", "email"=>"bob@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.7ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed 500 Internal Server Error in 77ms
+
+NoMethodError (undefined method `image_accessor' for #<Class:0xa3b1370>):
+  app/models/user.rb:14:in `<class:User>'
+  app/models/user.rb:2:in `<top (required)>'
+  app/controllers/users_controller.rb:21:in `create'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-12-21 21:28:06 -0600
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from <top (required)> at /home/student/rails_projects/Bookmark_Project/app/controllers/application_controller.rb:1)
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j0Gyauo55zN99dSp87QPEgiAeBxQXLTCXlEgkrv2iSM=", "user"=>{"real_name"=>"Bob", "username"=>"bob", "email"=>"bob@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."username" = 'bob') LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "updated_at", "username", "password", "email", "real_name", "encrypted_password", "salt", "photo_file_name", "photo_content_type", "photo_file_size", "photo_updated_at") VALUES ('2011-12-22 03:28:08.026673', '2011-12-22 03:28:08.026673', 'bob', NULL, 'bob@gmail.com', 'Bob', '44cadbb892c4593e88024e0310ef5ebc01544bd5f2eedb1bda8f17bafeb6f1f8', 'e74c5044a9eda732373b57d47382883849bba10b671a419dc163566199f12122', NULL, NULL, NULL, NULL)[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/
+Completed 302 Found in 235ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 21:28:08 -0600
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/bookmarks
+Completed 302 Found in 74ms
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 21:28:08 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBookmark Load (0.1ms)[0m  SELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 1))
+Rendered layouts/_header2.html.erb (3.7ms)
+Rendered bookmarks/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 78ms (Views: 19.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 21:28:19 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (65.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header2.html.erb (1.3ms)
+Rendered users/show.html.erb within layouts/application (70.4ms)
+Completed 200 OK in 179ms (Views: 150.2ms | ActiveRecord: 0.5ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /home/student/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 21:41:55 -0600
+  Processing by SessionsController#new as HTML
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT 1[0m
+Rendered layouts/_header.html.erb (0.7ms)
+Rendered sessions/new.html.erb within layouts/application (65.3ms)
+Completed 200 OK in 373ms (Views: 135.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-21 21:42:04 -0600
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DwhbVkSUNDroHPloAeE44byQnxL3uHQmiuAy7ppNLO4=", "session"=>{"username"=>"bob", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = 'bob' LIMIT 1
+Redirected to http://localhost:3000/bookmarks
+Completed 302 Found in 187ms
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 21:42:04 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[36mUser Load (9.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBookmark Load (0.1ms)[0m  SELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 1))
+Rendered layouts/_header2.html.erb (1.4ms)
+Rendered bookmarks/index.html.erb within layouts/application (63.9ms)
+Completed 200 OK in 275ms (Views: 123.6ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 21:42:06 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (6.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header2.html.erb (1.1ms)
+Rendered users/show.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 159ms (Views: 78.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 21:43:15 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (4.3ms)
+Rendered users/show.html.erb within layouts/application (98.8ms)
+Completed 500 Internal Server Error in 123ms
+
+ActionView::Template::Error (undefined method `avatar' for #<User:0x9dac0d8>):
+    2: <% render 'form' %>
+    3: <p id="notice"><%= notice %></p>
+    4: 
+    5: <%= image_tag @user.avatar.url(:medium) %>
+    6: 
+    7: Username: <%= @user.username %>
+    8: <br />
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb___883753354_78512750_1071498018'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 21:43:22 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (4.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (1.3ms)
+Rendered users/show.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 88ms (Views: 38.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos/medium/missing.png" for 127.0.0.1 at 2011-12-21 21:43:23 -0600
+
+ActionController::RoutingError (No route matches "/photos/medium/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 21:44:10 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (4.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (1.2ms)
+Rendered users/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 59ms (Views: 11.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos/original/missing.png" for 127.0.0.1 at 2011-12-21 21:44:10 -0600
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 21:46:13 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (4.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (1.2ms)
+Rendered users/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 44ms (Views: 12.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/original/missing.png" for 127.0.0.1 at 2011-12-21 21:46:13 -0600
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 21:46:15 -0600
+  Processing by UsersController#upload_avatar as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb___811224496_85611840_1071498018 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:1)
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header2.html.erb (1.4ms)
+Rendered users/upload_avatar.html.erb within layouts/application (45.6ms)
+Completed 200 OK in 61ms (Views: 59.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 21:47:13 -0600
+  Processing by UsersController#upload_avatar as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb___811224496_82083880_1071498018 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:1)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (1.4ms)
+Rendered users/upload_avatar.html.erb within layouts/application (58.3ms)
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-12-21 21:47:15 -0600
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.4ms)
+Rendered layouts/_header2.html.erb (1.2ms)
+Rendered users/edit.html.erb within layouts/application (103.7ms)
+Completed 200 OK in 148ms (Views: 105.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at 2011-12-21 21:47:25 -0600
+  Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DwhbVkSUNDroHPloAeE44byQnxL3uHQmiuAy7ppNLO4=", "user"=>{"username"=>"bob", "email"=>"bob@gmail.com", "photo"=>"joker.jpg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update", "id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."username" = 'bob') AND ("users".id <> 1) LIMIT 1[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 128ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 21:47:25 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (4.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (1.1ms)
+Rendered users/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 56ms (Views: 11.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos/original/missing.png" for 127.0.0.1 at 2011-12-21 21:47:25 -0600
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.9ms)
+
+
+Started GET "/photos/original/missing.png" for 127.0.0.1 at 2011-12-21 21:47:25 -0600
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /home/student/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 21:50:28 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (36.8ms)
+Rendered users/show.html.erb within layouts/application (70.2ms)
+Completed 500 Internal Server Error in 205ms
+
+ActionView::Template::Error (undefined method `photo' for #<User:0xaa84a44>):
+    2: <% render 'form' %>
+    3: <p id="notice"><%= notice %></p>
+    4: 
+    5: <%= image_tag @user.photo.url %>
+    6: 
+    7: Username: <%= @user.username %>
+    8: <br />
+  app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb___400396173_84664330_965699641'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 21:50:43 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (4.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header2.html.erb (1.2ms)
+Rendered users/show.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 63ms (Views: 16.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/photos/original/missing.png" for 127.0.0.1 at 2011-12-21 21:50:44 -0600
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 21:57:32 -0600
+  Processing by UsersController#upload_avatar as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb___686379520_87749170_965699641 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:1)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (5.4ms)
+Rendered users/upload_avatar.html.erb within layouts/application (58.9ms)
+Completed 200 OK in 66ms (Views: 65.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 21:58:06 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (4.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (1.2ms)
+Rendered users/show.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 60ms (Views: 12.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/original/missing.png" for 127.0.0.1 at 2011-12-21 21:58:06 -0600
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/photos/original/missing.png" for 127.0.0.1 at 2011-12-21 21:58:06 -0600
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2011-12-21 21:58:08 -0600
+  Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.5ms)
+Rendered layouts/_header2.html.erb (1.2ms)
+Rendered users/edit.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 58ms (Views: 9.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/1" for 127.0.0.1 at 2011-12-21 21:58:17 -0600
+  Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DwhbVkSUNDroHPloAeE44byQnxL3uHQmiuAy7ppNLO4=", "user"=>{"username"=>"bob", "email"=>"bob@gmail.com", "photo"=>"joker.jpg", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Update", "id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."username" = 'bob') AND ("users".id <> 1) LIMIT 1[0m
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 92ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 21:58:18 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (4.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (1.5ms)
+Rendered users/show.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 41ms (Views: 13.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/original/missing.png" for 127.0.0.1 at 2011-12-21 21:58:18 -0600
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/photos/original/missing.png" for 127.0.0.1 at 2011-12-21 21:58:18 -0600
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 22:02:48 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (4.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header2.html.erb (2.9ms)
+Rendered users/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 70ms (Views: 15.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/photos/original/missing.png" for 127.0.0.1 at 2011-12-21 22:02:48 -0600
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 22:02:53 -0600
+  Processing by UsersController#upload_avatar as HTML
+DEPRECATION WARNING: form was removed from Rails and is now available as a plugin. Please install it with `rails plugin install git://github.com/rails/dynamic_form.git`. (called from block in _app_views_users_upload_avatar_html_erb___686379520_84758460_965699641 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+Rendered users/upload_avatar.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `file_field' for #<String:0xa17b63c>):
+    1: <% form_for(:photo, :url => upload_path, :html => { :multipart => true }) do |f| %>
+    2:   <%= form.file_field :photo %>
+    3: <% end %>
+  app/views/users/upload_avatar.html.erb:2:in `block in _app_views_users_upload_avatar_html_erb___686379520_84758460_965699641'
+  app/views/users/upload_avatar.html.erb:1:in `_app_views_users_upload_avatar_html_erb___686379520_84758460_965699641'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.5ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 22:05:16 -0600
+  Processing by UsersController#upload_avatar as HTML
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/users_controller.rb:16:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 22:06:09 -0600
+
+ActionController::RoutingError (No route matches "/upload"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 22:07:00 -0600
+
+ActionController::RoutingError (No route matches "/upload"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 22:07:04 -0600
+
+ActionController::RoutingError (No route matches "/upload"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /home/student/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111)
+
+
+Started GET "/upload" for 127.0.0.1 at 2011-12-21 22:07:38 -0600
+
+ActionController::RoutingError (No route matches "/upload"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-21 22:07:44 -0600
+  Processing by SessionsController#new as HTML
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/bookmarks
+Completed 302 Found in 161ms
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 22:07:44 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBookmark Load (0.1ms)[0m  SELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 1))
+Rendered layouts/_header2.html.erb (3.1ms)
+Rendered bookmarks/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 111ms (Views: 34.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/upload_avatar" for 127.0.0.1 at 2011-12-21 22:07:49 -0600
+  Processing by UsersController#upload_avatar as HTML
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/users_controller.rb:16:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)
+
+
+Started GET "/upload_avatar" for 127.0.0.1 at 2011-12-21 22:08:35 -0600
+  Processing by UsersController#upload_avatar as HTML
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/users_controller.rb:16:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)
+
+
+Started GET "/upload_avatar" for 127.0.0.1 at 2011-12-21 22:08:36 -0600
+  Processing by UsersController#upload_avatar as HTML
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/users_controller.rb:16:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.2ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-21 22:08:40 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mBookmark Load (0.1ms)[0m  SELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 1))
+Rendered layouts/_header2.html.erb (1.3ms)
+Rendered bookmarks/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 83ms (Views: 21.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-21 22:08:42 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered users/_form.html.erb (66.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header2.html.erb (3.3ms)
+Rendered users/show.html.erb within layouts/application (77.2ms)
+Completed 200 OK in 105ms (Views: 79.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/photos/original/missing.png" for 127.0.0.1 at 2011-12-21 22:08:42 -0600
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/photos/original/missing.png" for 127.0.0.1 at 2011-12-21 22:08:42 -0600
+
+ActionController::RoutingError (No route matches "/photos/original/missing.png"):
+  
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/upload_avatar" for 127.0.0.1 at 2011-12-21 22:08:44 -0600
+  Processing by UsersController#upload_avatar as HTML
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.[]):
+  app/controllers/users_controller.rb:16:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.6ms)
