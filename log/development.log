@@ -45606,3 +45606,470 @@ ActionController::RoutingError (No route matches "/photos/original/missing.png")
   
 
 Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /home/student/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-12-22 01:05:47 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (1.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered users/_form.html.erb (68.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header.html.erb (0.8ms)
+Rendered users/show.html.erb within layouts/application (82.9ms)
+Completed 200 OK in 331ms (Views: 91.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-22 01:05:55 -0600
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header.html.erb (0.8ms)
+Rendered sessions/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 84ms (Views: 11.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-12-22 01:06:02 -0600
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JhTT7d4F50XMH01Bl4qZDWyRL5sMbr9dQ7c8wg8ZGbY=", "session"=>{"username"=>"bob", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = 'bob' LIMIT 1
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_header.html.erb (1.1ms)
+Rendered sessions/new.html.erb within layouts/application (56.3ms)
+Completed 200 OK in 137ms (Views: 67.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-12-22 01:06:08 -0600
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.6ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_header.html.erb (0.8ms)
+Rendered users/new.html.erb within layouts/application (152.5ms)
+Completed 200 OK in 304ms (Views: 282.3ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-12-22 01:06:25 -0600
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JhTT7d4F50XMH01Bl4qZDWyRL5sMbr9dQ7c8wg8ZGbY=", "user"=>{"real_name"=>"Tom", "username"=>"tom", "email"=>"tom@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM "users" WHERE ("users"."username" = 'tom') LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO "users" ("created_at", "updated_at", "username", "password", "email", "real_name", "encrypted_password", "salt", "avatar") VALUES ('2011-12-22 07:06:25.762995', '2011-12-22 07:06:25.762995', 'tom', NULL, 'tom@gmail.com', 'Tom', '9d391d66b7e2daaf46f6c8603d5a9ac6bc315783f9789317ca7941221616833a', '6c6ab093b5bdc1c04923dbde5da136946c9383c323e1b5449606f623284355f9', NULL)
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/
+Completed 302 Found in 188ms
+
+
+Started GET "/" for 127.0.0.1 at 2011-12-22 01:06:25 -0600
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Redirected to http://localhost:3000/bookmarks
+Completed 302 Found in 105ms
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-22 01:06:26 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36mBookmark Load (0.3ms)[0m  [1mSELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 2))[0m
+Rendered layouts/_header2.html.erb (1.9ms)
+Rendered bookmarks/index.html.erb within layouts/application (26.6ms)
+Completed 200 OK in 155ms (Views: 30.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/upload_avatar" for 127.0.0.1 at 2011-12-22 01:06:28 -0600
+  Processing by UsersController#upload_avatar as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb__162102099_94780750_50699223 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+Rendered layouts/_header2.html.erb (2.5ms)
+Rendered users/upload_avatar.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 83ms (Views: 11.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/upload_avatar" for 127.0.0.1 at 2011-12-22 01:06:33 -0600
+  Processing by UsersController#upload_avatar as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JhTT7d4F50XMH01Bl4qZDWyRL5sMbr9dQ7c8wg8ZGbY=", "avatar"=>{"uploaded_data"=>#<ActionDispatch::Http::UploadedFile:0x9d9c570 @original_filename="joker.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"avatar[uploaded_data]\"; filename=\"joker.jpg\"\r\nContent-Type: image/jpeg\r\n", @tempfile=#<File:/tmp/RackMultipart20111222-4331-1kyc0bm>>}, "commit"=>"Upload"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mAREL (0.5ms)[0m  UPDATE "users" SET "avatar" = '/9j/4AAQSkZJRgABAgAAAQABAAD//gAEKgD/4gv4SUNDX1BST0ZJTEUAAQEA
+AAvoAAAAAAIAAABtbnRyUkdCIFhZWiAH2QADABsAFQAkAB9hY3NwAAAAAAAA
+AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA9tYAAQAAAADTLQAAAAAp+D3er/JV
+rnhC+uTKgzkNAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBkZXNj
+AAABRAAAAHliWFlaAAABwAAAABRiVFJDAAAB1AAACAxkbWRkAAAJ4AAAAIhn
+WFlaAAAKaAAAABRnVFJDAAAB1AAACAxsdW1pAAAKfAAAABRtZWFzAAAKkAAA
+ACRia3B0AAAKtAAAABRyWFlaAAAKyAAAABRyVFJDAAAB1AAACAx0ZWNoAAAK
+3AAAAAx2dWVkAAAK6AAAAId3dHB0AAALcAAAABRjcHJ0AAALhAAAADdjaGFk
+AAALvAAAACxkZXNjAAAAAAAAAB9zUkdCIElFQzYxOTY2LTItMSBibGFjayBz
+Y2FsZWQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWFla
+IAAAAAAAACSgAAAPhAAAts9jdXJ2AAAAAAAABAAAAAAFAAoADwAUABkAHgAj
+ACgALQAyADcAOwBAAEUASgBPAFQAWQBeAGMAaABtAHIAdwB8AIEAhgCLAJAA
+lQCaAJ8ApACpAK4AsgC3ALwAwQDGAMsA0ADVANsA4ADlAOsA8AD2APsBAQEH
+AQ0BEwEZAR8BJQErATIBOAE+AUUBTAFSAVkBYAFnAW4BdQF8AYMBiwGSAZoB
+oQGpAbEBuQHBAckB0QHZAeEB6QHyAfoCAwIMAhQCHQImAi8COAJBAksCVAJd
+AmcCcQJ6AoQCjgKYAqICrAK2AsECywLVAuAC6wL1AwADCwMWAyEDLQM4A0MD
+TwNaA2YDcgN+A4oDlgOiA64DugPHA9MD4APsA/kEBgQTBCAELQQ7BEgEVQRj
+BHEEfgSMBJoEqAS2BMQE0wThBPAE/gUNBRwFKwU6BUkFWAVnBXcFhgWWBaYF
+tQXFBdUF5QX2BgYGFgYnBjcGSAZZBmoGewaMBp0GrwbABtEG4wb1BwcHGQcr
+Bz0HTwdhB3QHhgeZB6wHvwfSB+UH+AgLCB8IMghGCFoIbgiCCJYIqgi+CNII
+5wj7CRAJJQk6CU8JZAl5CY8JpAm6Cc8J5Qn7ChEKJwo9ClQKagqBCpgKrgrF
+CtwK8wsLCyILOQtRC2kLgAuYC7ALyAvhC/kMEgwqDEMMXAx1DI4MpwzADNkM
+8w0NDSYNQA1aDXQNjg2pDcMN3g34DhMOLg5JDmQOfw6bDrYO0g7uDwkPJQ9B
+D14Peg+WD7MPzw/sEAkQJhBDEGEQfhCbELkQ1xD1ERMRMRFPEW0RjBGqEckR
+6BIHEiYSRRJkEoQSoxLDEuMTAxMjE0MTYxODE6QTxRPlFAYUJxRJFGoUixSt
+FM4U8BUSFTQVVhV4FZsVvRXgFgMWJhZJFmwWjxayFtYW+hcdF0EXZReJF64X
+0hf3GBsYQBhlGIoYrxjVGPoZIBlFGWsZkRm3Gd0aBBoqGlEadxqeGsUa7BsU
+GzsbYxuKG7Ib2hwCHCocUhx7HKMczBz1HR4dRx1wHZkdwx3sHhYeQB5qHpQe
+vh7pHxMfPh9pH5Qfvx/qIBUgQSBsIJggxCDwIRwhSCF1IaEhziH7IiciVSKC
+Iq8i3SMKIzgjZiOUI8Ij8CQfJE0kfCSrJNolCSU4JWgllyXHJfcmJyZXJocm
+tyboJxgnSSd6J6sn3CgNKD8ocSiiKNQpBik4KWspnSnQKgIqNSpoKpsqzysC
+KzYraSudK9EsBSw5LG4soizXLQwtQS12Last4S4WLkwugi63Lu4vJC9aL5Ev
+xy/+MDUwbDCkMNsxEjFKMYIxujHyMioyYzKbMtQzDTNGM38zuDPxNCs0ZTSe
+NNg1EzVNNYc1wjX9Njc2cjauNuk3JDdgN5w31zgUOFA4jDjIOQU5Qjl/Obw5
++To2OnQ6sjrvOy07azuqO+g8JzxlPKQ84z0iPWE9oT3gPiA+YD6gPuA/IT9h
+P6I/4kAjQGRApkDnQSlBakGsQe5CMEJyQrVC90M6Q31DwEQDREdEikTORRJF
+VUWaRd5GIkZnRqtG8Ec1R3tHwEgFSEtIkUjXSR1JY0mpSfBKN0p9SsRLDEtT
+S5pL4kwqTHJMuk0CTUpNk03cTiVObk63TwBPSU+TT91QJ1BxULtRBlFQUZtR
+5lIxUnxSx1MTU19TqlP2VEJUj1TbVShVdVXCVg9WXFapVvdXRFeSV+BYL1h9
+WMtZGllpWbhaB1pWWqZa9VtFW5Vb5Vw1XIZc1l0nXXhdyV4aXmxevV8PX2Ff
+s2AFYFdgqmD8YU9homH1YklinGLwY0Njl2PrZEBklGTpZT1lkmXnZj1mkmbo
+Zz1nk2fpaD9olmjsaUNpmmnxakhqn2r3a09rp2v/bFdsr20IbWBtuW4Sbmtu
+xG8eb3hv0XArcIZw4HE6cZVx8HJLcqZzAXNdc7h0FHRwdMx1KHWFdeF2Pnab
+dvh3VnezeBF4bnjMeSp5iXnnekZ6pXsEe2N7wnwhfIF84X1BfaF+AX5ifsJ/
+I3+Ef+WAR4CogQqBa4HNgjCCkoL0g1eDuoQdhICE44VHhauGDoZyhteHO4ef
+iASIaYjOiTOJmYn+imSKyoswi5aL/IxjjMqNMY2Yjf+OZo7OjzaPnpAGkG6Q
+1pE/kaiSEZJ6kuOTTZO2lCCUipT0lV+VyZY0lp+XCpd1l+CYTJi4mSSZkJn8
+mmia1ZtCm6+cHJyJnPedZJ3SnkCerp8dn4uf+qBpoNihR6G2oiailqMGo3aj
+5qRWpMelOKWpphqmi6b9p26n4KhSqMSpN6mpqhyqj6sCq3Wr6axcrNCtRK24
+ri2uoa8Wr4uwALB1sOqxYLHWskuywrM4s660JbSctRO1irYBtnm28Ldot+C4
+WbjRuUq5wro7urW7LrunvCG8m70VvY++Cr6Evv+/er/1wHDA7MFnwePCX8Lb
+w1jD1MRRxM7FS8XIxkbGw8dBx7/IPci8yTrJuco4yrfLNsu2zDXMtc01zbXO
+Ns62zzfPuNA50LrRPNG+0j/SwdNE08bUSdTL1U7V0dZV1tjXXNfg2GTY6Nls
+2fHadtr724DcBdyK3RDdlt4c3qLfKd+v4DbgveFE4cziU+Lb42Pj6+Rz5Pzl
+hOYN5pbnH+ep6DLovOlG6dDqW+rl63Dr++yG7RHtnO4o7rTvQO/M8Fjw5fFy
+8f/yjPMZ86f0NPTC9VD13vZt9vv3ivgZ+Kj5OPnH+lf65/t3/Af8mP0p/br+
+S/7c/23//2Rlc2MAAAAAAAAALklFQyA2MTk2Ni0yLTEgRGVmYXVsdCBSR0Ig
+Q29sb3VyIFNwYWNlIC0gc1JHQgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAABYWVogAAAAAAAAYpkAALeFAAAY2lhZWiAAAAAAAAAAAABQAAAA
+AAAAbWVhcwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACWFlaIAAA
+AAAAAAMWAAADMwAAAqRYWVogAAAAAAAAb6IAADj1AAADkHNpZyAAAAAAQ1JU
+IGRlc2MAAAAAAAAALVJlZmVyZW5jZSBWaWV3aW5nIENvbmRpdGlvbiBpbiBJ
+RUMgNjE5NjYtMi0xAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AABYWVogAAAAAAAA9tYAAQAAAADTLXRleHQAAAAAQ29weXJpZ2h0IEludGVy
+bmF0aW9uYWwgQ29sb3IgQ29uc29ydGl1bSwgMjAwOQAAc2YzMgAAAAAAAQxE
+AAAF3///8yYAAAeUAAD9j///+6H///2iAAAD2wAAwHX/2wBDAAUDBAQEAwUE
+BAQFBQUGBwwIBwcHBw8LCwkMEQ8SEhEPERETFhwXExQaFRERGCEYGh0dHx8f
+ExciJCIeJBweHx7/2wBDAQUFBQcGBw4ICA4eFBEUHh4eHh4eHh4eHh4eHh4e
+Hh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh7/wgARCABpALQD
+ACIAAREBAhEB/8QAHAAAAgIDAQEAAAAAAAAAAAAABQYDBAECBwAI/8QAGQEB
+AAMBAQAAAAAAAAAAAAAAAgABAwQF/8QAGQEBAAMBAQAAAAAAAAAAAAAAAgAB
+AwQF/9oADAMAAAERAhEAAAFpsLMt81jZfltJ9JjXXLkXiwtVyxCSskBeMmz6
+Q55oMFtdzoNbnfTK3QFCw/LdkTrubkHyOclTJ3j/AGcJS0JAkt055SEc7zRF
+B7lKUopXneRY12NE89vnKyOu3jeTegc96c5Cwc3czDNRuhedMjYj33527+AH
+AMtVAantCw5azrmrGeswlD+iKByodalZ7L40Oq7LNs550PnrrJzUvSFCyolm
+hiXYaR9z4YzkdGmBtPL2c7Euid2clj0guGOIRejIHUlhKehtJkY5nh7HLKSg
+dgw6IxLKsVdAQXFdGN2w4WphzDbeud+n7LeuKcEG5U0ltUal+UJMjsRQ2K9m
+XC/qmLPVIV8153NGFvV+7spU3BV0yo6b7IloyvgAEi22TUdYpVUb0W2qngp5
+bzVjbWXO/T26yqc4MxhUGwyB2zXFlqPR03lLECQDnAVvq53PZL0JCsSyaz3E
+1blVwxnOqFYKUGDSXWWMWWgg1hK3wUuZtCbYxXfZFY+ei6MvDlni5Tt9OFnE
+uM6//8QALRAAAQMDAwIFBAIDAAAAAAAAAgEDBAAFEhETMQYyFBUhJDQQIjM1
+JUIjNkH/2gAIAQAAAQUChJ/J3tP4qyopW65rsW5wCoqg/MuY6XM8kEW1bpNW
+la3aaJ1pZLmoyIjas2tPf9U+s4+6FAlyRa4Kv+t2i4yAjOzVlXByeMOyzHpV
+XdyUg3Bt9sSpt8GSKZGKpkmN4aMRK5NWo5YDFkErs5Q24YDi7O8Ea3zIvPtF
+avEco0t8HVWobzDKN3mKg2QgfuF6aTyrpmOiJfVdWr8pKZ1HTckSUQXJRqtQ
+y26cTdrwZkUW0yUqfZIvlLLhpWpG5f2UbuBEuoEurXavMtPsRasc4o1xu/ra
+On8fC3H5fUPcVQk97P0Sc7pTf4oholWsR34upK8mTHq2bRr4vqT9ifc3y32l
+UotfpawzuV3/AFFnJAgXDbKZ1AWr5VC+bcG9ZxtLphjHim6jkG7MEpdUGg2G
+6Sbg1dlbWbEL3PUf7A+5vlvtLmV9I7hNyJZ7lgsYqUCZBfJy7mSvlUL51xUf
+HDjW7q2EIHq6ZhA/Jbs0TxjrwRo8hSakQDIpfUX7Au63R21WW4yVFzJ5RFWm
+k+5P9asa+zk4uDMFRNeYnpNuBKk1x1sUFUIIzmNWmV4KVNveAOvOk1LAqt6K
+krqL59utabaRXHAfDCi5lcx4ritIqhQ3Z9Y0AFOEDQCt6xpO8tGJlwkavZ5O
+sERkq6HBhI9UxluHUZjbjtR2zjpEBXrwrYz2769ncn3H4z+3RcvJk5FTGOTa
+Z4ohWx5tqAxMAZF3wcjf3ui5U76HwsdUCOZZE2+62jpka9L3dUen+3kaIC3m
+ERo1bpAU6rjxu/kLlkRKc5IICka5Apbj+vl8wvXxDmAKiOXUkSQ+iaqOtFlj
+pokcBpppo2vAuYjKcdAXUNy4z3W5Mq6vyxgW89uW2rckuYYrveVzXEWU0lC6
+06205HIpTq46aIvM1VIssiTvFNacD/E0AI3CH7i1bFXVWjmKquoBMxh2ydBZ
+FulZbhVDf2aS7R0QuLYieT29rWidEpGWSrzOx1BUoCTJVESxRRyQAi/kuDtZ
+aU4tQuxstWbdMJgrs4Ls0uaMfu1q2n7F8zVqP3BRVNJV+iJ6VAc1R4taZcwb
+DYNpyImjv2pEWoxejhY0q6kVJxzSVB+OXDHcNFzJ+jNLzD+U5SfRe0qj8sU7
+X9ipntr/xAAiEQACAQQBBQEBAAAAAAAAAAAAAQIDEBEhMQQSIjJBE1H/2gAI
+AQIRAT8BjIjpcW3ngTFaeVpEW18O9tmcH6P+CjgT8R8kX5DI4RrBL1IEiPNn
+yQTwPkXtbTI7G/EgSi8ZI82lnOToKcakWpFaHZNxF7DPH6yrUWMRO7R0sU9y
+OoZEdZ5t09eVF6Kk++XcfR7s8PQ44KXoVH5YtiIoIxu0b/TBTWiulnI1k7UI
+XFo2xuyIFa//xAAgEQACAgIBBQEAAAAAAAAAAAAAAQIRAxAhBBIiMUEy/9oA
+CAEBEQE/AaGudskhryMORN02UJDW37I/ka4ETbFD6Rj5jIj3Joh+T5prUY8j
+Iy5olvqpuLtGGXdCz4IdmPHfLMa74qSM7dVE6ckcay4Vk4MMHCFMS8CMq05d
+nslGsyUGZ77zFHxslqU2i9S9ai7M3lkoUVdmeTbOlyOuxjLJ+hi9D1FUyUbI
+39MiMA9f/8QANhAAAgECAwQJAgYBBQAAAAAAAQIAAxEQEiEEMUFREyIyQlJh
+cXOBFJEgIzChsdFyBTRTYsH/2gAIAQAABj8C2ibT7Zij/pPpx3tBL8MKPrNo
+/wApk5wWW7Q57ip5jdKRNZut3A2to+Tac3NWG8S+8HfdoKvWc+Bf7iiUfawN
+SjRLKNb/AIBVpbMSh3G4lXJk6TvSqa/Rmll6wHKGjsdlCDvRU2pQddLRVqWt
+wtgrNTvygq1NkDM3GXTZEVjpe0uPvNfmZjYk85mdFqPaU7gJUsAdNGl86Anc
+GXSZTsKX5gidbZFuOZn+xT7ztdG3FbTqG+F62X5W8stWw8lm0ODNp9sxqg0J
+QRASCA0XTTBFMFLwzlFOACgtERicj6ECNSpp1gLgnnHQhVsPvKdEm63vAEFg
+aYP4Qb4Jr1WNjNp9owZvBAoe4zCKMKPrKtx3pa09JuDX4QtkOnlNUt8Rh5Rv
+WUlPCJ7I/wDYcBh6YUVPjm0+0YjMNMsplPEIB5YUfWVut3prMwEBUXsZmtkI
+7Uy7Psy+ZZoWqbLkQd/hKwpqGCb7c4gt+0X2f7hwGBwWoN4Mqtzon+IgC3uk
+V8qizQhsKPrK1x35vvG046y6HLKykZlySzjd+8SnSUWJCgAWjOjm5Ym8XNrF
+9n+4Z0le+XwjjAKVFaYHLA4vf/gP8SmOky9WEdJULCcfnCj6ytpfrS7aRtLc
+YUvaZqRVr8IEq0k2hjqSp0ENX8wuR+WjHsCA2i+sHs/3PqtrRyO5THehqLSC
+jmdFWZekV/TAwG2H0/dK5ZQs+S28y/SXadmCU2bcI9Snxa9pnfWMbb5kbdNG
+lJM61KrbkjGpd3qasfOC/VZWF83ETpaAy5H6ynhEq1OsoTdzh/LU33CL9Qej
+TkDqYOjv84W84g8sLCIKm5gZbNe/OZlglM8bTyOGc4Wp1CvpLsSx5mDZNrfM
+raIzcPKdENzNcTMvP7xFpC7HUzMV3cTALaDjCBgtt3GZRAQIbibKF8RiUwmo
+HamQmC8W27KJaW5QLwwLNKjtvG4TMs2Vdo1qUjq3PlFTk0FuHCBAiqo/efUb
+X3+ysdTgz2mdKNwfOak/aPUsSqb9ISmbTWWHzjr4R/GBluUvLMTfhFXxNmPx
+GU7oTA40a0p1OnFR21YDuwaTJSqfmDURswsb6ryOAzPYS3TN9ofmf6hp3RKh
+uFXLvMy02JW/axzcbTXAVB8wj5EO+8L+EZRAg+cXPphqdDDVTvDCnhuHGbat
+7dWZF7PH9Dom38JfhPOZHPWPGaVFMyXBhEtNMVw+82r/AB/Rp+s+Yv6K4f/E
+ACcQAQACAgEDBAMAAwEAAAAAAAEAESExQVFhcRCBobGRwfAg0fHh/9oACAEA
+AAE/Icj4+vQzqABMGU087KCxq0LyzebbNmvqJodwllfFXOdXmB2VYGEFz2lk
+trE3uGM/iBcQFCh9xlgeKVe7FNCs/uMpf22bfMN1atNbgQ3NiO7MiTaK/mAB
+PKpTFPE8S2MFlqCsQVfv6pV/Jjwm8tQTNCP5abBmXzmpViB1p6NxhsLe3KwT
+6am4GMKZ4OniV4uR1DnWNfJM+oSFZ86r8TPG27T8IR6Kx/GI2A/C/wBQxScw
+KiWtR4qbks4L4gF+WJ+pjVtVLXf/AAiOfu0UKZNSK+gS22pRK7p8xBB8CXPc
+Fl+3NZuZd7ggNmDKUSgIc9b3XHurCfy+8amwjFWNMDJgD3g2RUDBmqamwai1
+tlUYKTsdV+IA7q8IaeLs8x0QxXpHySDdDjBfO3PWXS30RwXVQqgUxTwzIpTn
+CILyiGaC74TUeNVS8VeYNX9MD80HpexKjjSoahr8UhKj+yWUOx3mtl/dO1Hq
+vd6b4jdTWYPSOk3z1uqqNDUlDlvMDMVAUJY6F2OsDMP7n3LBUyby31mfj/cf
+Ig9L0T7IkY3BZafKj/0pCFKvN33iRDWpvDJmcZZnIVdFisADUExKwtWa7ocw
+jVSrt5DG0wiUHFw12sMcxHWx9x34v3HzIEXobPQPg0T5kMuI4cRNKzBtptCv
+MAncAZalQwbpB3cEXNlHLdJaegpzDoZjbMtg1bHtAwiSDsFaSXXUtjftf7iZ
+s6Tc6o035Ic50fcWq3nEe56E0VMYBGqOoTiaJ8iCjb0hHnchK533JRePkCJB
+z61CJPWZDW29ZZfcFwS58q0/UQERbl76SlSfaPjmg6PPaY9eoP5UU3gDqizv
+iLlCjKaPEBei9i8QjVMOIlYyUnxCLBhqNEWnzB1JiGUYgcBENKAh5Fa9kFgL
+IfJLAFE3LuudkbliBcsXrAnkaolacrWsS2C826oqcAvC/wDIB7EL3aCBEc9j
+tMLjbgIvbwgOAmiHduVusU6CApJmRk6TImckopxPZF1bNRjGLzCuh96MMAFb
+hrVHEbNnMoDENFxlkU7t6I0PyRBrbtervuZICal7pik0FscTZeQjLORm5P1N
+DQ4epNEDcVoxABIt0g90IGhS3xhM4cK1EX27pMqfK+l2q+lBWdCiG/BKryVM
+O3snYgQQVuR/Dgfcb6U09oCTXSJGjR8kHOUlz4e8VOt2MWCovdX0jINcPyE2
+INrI1KMP3QYO0YkVo8ZZlZBvEEPmWSKvxHP44mqKxFU0+0AsDtxFIw4PaZkx
+VkKKRAcYP2TGCWyuIQ43PcmKrqSm2yQzBL59ByDuwLYjcfgSi8sMHMuUmwOW
+CrE0mxGaHAEdy+xLQSC7YH49J0wsFQwrbNd4H8oe+ajfMvYq8kpOuEPJG2eo
+XbHF/Usot6Jp7R/N4m6bpoTR6Hc0fXTX3+kTdNn/AA039PyJweJ//9oADAMA
+AAERAhEAABB+SQkUO9Aif3ASzI5kVzDBF1rrsOy2VfV6XAz858bJ2QyX5bnP
++ZJJ6p139IPqLr+WoYMpdaN5CZz6D6EIKRb/xAAgEQEBAQACAwACAwAAAAAA
+AAABABEhMRBBUWGBcZGx/9oACAECEQE/EMjMmt7Ru8whpri2NzLlGjjAEOIb
+I4SThob4BLLY/wAvqCPfsmj8QEuglkb1Hi7Q4eOP6yBg5z/t32l58nZP0y1w
+xOC6xtfBpcQSDfblzcvcnq4nEJByvhX17s6JD0WiF2hLi5TbYe2zP9WzEcyR
+atnEUFqviXBj4SPdl4eohpvjVMkWG4zEsDuIYxl3Hn+/F7ukd+BIzu0+P//E
+AB4RAQEBAAICAwEAAAAAAAAAAAEAESExEEFRYXGx/9oACAEBEQE/EH7Wu9jk
+2QwNm+uZs+7Xpd5Eh9xfNoQTDndcSLjaOLmVzDlDydYJgLrdc9JOZPXhTbdC
+NzLpYybBJz4ulhqEeWE3175MQ/YhdIMThE68SuLByve2sV3OpAp1+y0M4nB6
+XCOoHi0d26RwHjN+QfiEIexbCKui6eHR+n9jzPw+7Ru3uMPZsSRLo23/xAAm
+EAEAAgICAQQCAwEBAAAAAAABABEhMUFRYXGBkaGxwRDw8dHh/9oACAEAAAE/
+EDggf7eIKzUetsxAttazf7A2BuKtp2TRPEP/ADL6xWHrLEZNgRjyIFQOsdv7
+gTtEOhoXVuR1rMCCaCssFWPCxea0rtkYDe1Ym+Rw03DA5on5MC64wPNdWkS6
+D3C8ZMBbfHDaIOLusOZcYaOSQ+VMFndBK4XtLMEAQjnZD8k9GGAEXSDukMsr
+M4YYr/JfUx3YBqCAMAGy1TldSrRywxqNlPMFGqrGnsE0YuX6EoCkBzO/eqKB
+AU7zarT1GFC4VQ7EvPH+S07Sptd/3uAOxQQDWOSuIIBRS4WqVYVvWMq9xDXu
+FJUZkqtm/exYOJzAxgWlfhnPjRiUFmlsLLuqfHEs40RJQ6LxJTHOUK5LUQtl
+vJYUxos9uD80F+awS96YDkDAF8EUAWpHZW5mSo/xaNdrSco5SQCTe5qFYvc3
+IetER6ypgMD4UoVBqzD7PVy8DKuS46gI1bIEsctTXLqBTJBsb8J3xAIla8tS
+y6rPBGibCK0umhs2sGYAHokGxhauK4Wgxdj9StxhlCZkLTXzPuQNwQ7+sLiG
+e5dUjF9uJu+vtMBDTENcwmTIFexMSERkgEPN9RJC8PzKiKN4ljVUW4S3QLco
+QNYqOhqyGw0VZr/yZVUwvsgJsgzKDx1LgBLbkhFOwQ9AhW2bT+IGBD8X7n2o
+g0BRrnO5gNalFC6vo3AZEA+8xGaNWohADRpqmsrZwE2IynylQit69Yx6YkQp
+yVWxocnvfpHADJANmb17y5Tr3IHOK1MgkB4FGSrH356mJxjP1Zlbt1LfSbdp
+tqbqgnjwwRAGswp6viAjYfM/iD4H8z7EVV7dx7K6lQox8xMsXvVUAZiIuNoh
+ZbV8AZkE0R0Q2JsZwKMIxzHhQCDNA+icFOfSIBy6ltHgxCjmkVhWrKnAi0GD
+kG/JcCAC5cIBujLAJJntSuvDHEobJlxnUgpJfaSjCNkr3eCMCbW1vq8z7kv7
+uVPqCGvLPcD1b35TqyYvNpcbDCWnibop5o8nzGIbYgEq39SokHv5gFfGTL7R
+pqoHoK1fnDBReUVY8EUHustntW7ZzCvAd3tbAWt3EE+ousoaVUKvNcpUI2Cm
+G/M1eYPD+IjqZDS3yvf5Y1GtmdZbv2uE1HeHD6u59yPEdox1MhqZAy83MSiw
+ekqA0Cu9Aox6xq0DDwMM0dLmJwaXDQCoBa9DmIW4Q5Xunc6W9TCHTqIfyDHA
+Xd/Mso1h3/4iVJVVlPdGPYoABO+lq8tQcjTK4VXiiAcVCg2IDZRGQNsGRqXA
+Af2BbRCy+twSNr3Ekei2YkKKUHHrAxNDlN3TAQoqjK2Z9qEwtrPmZTY3fc1Y
+Jzj61BELi5SoKRi2GTpYq3ag3EiGyDUPVTG5koGx5lhgzqI8raXx/aI4N0rt
+2x1dyzMsi1o9WGyhbdFI5RoBda1q8IuK4F+lHtDMRqvK5HZmosgNKwxh4til
+MNkojywbKKVQIdeJgwMJ9iXSCnU5fcyAaqJXArmhl4yQyiB2h1BzVEBmppKw
+vDMTStm4B5Io9Qa/wcP/AGBcARSYDGM+Jktp9nuVKlMGVLk4Fr4ITC4C/IGr
+d+8ZcZSrVT+oPACGCkF2FlecvMsvTPYA4ixjBgFijzdX7x05CBdvPjxCKq0N
+byNHwhQLb400jOJ3L6YyCcrLzShG/CwZSq7VD7DXrWj7iiDaVQHJcDguu3RV
+4+SbCgtWNp3czgWQLyZMnvGNmsgzJNYpLAL/AOYYjMFSgc8QyZjyS9/0lh/o
+ItHqmAwIvZ/mPYs2eg1NkExvQ/UrQLqjT4Ft8axbTNg3S5h5YwruvQ2njEug
+UTdbR+Y3B3AcZYXmGABwHNwx+FxAHYs1p/hEzaW+6fNMKOx0htD+X4iLqMC9
+ER70yJPlqMtKmcVFSu3MCgt5nb1Ib+AXxmyMaGJbVBWK83CsYA5aLXyxlsGL
+Do4PeZRlfEC5FP6zG7wD0uNzNJGqD1S4IVjEPIxfrgiw9Yun/WR3pOPEBbpx
+fKWtwPhWtnO5QC6Sqo29yg2QUZh60EIbj2KgpRt6GyWDp4mR81vNM+zfzKOy
+r+Ar/kpdaIttW5lHRO15ekJczgcGbQDHBDvt73Fv8w1zFxitDZL3wxUj5iW5
+syswgBZsx4Js/rmfS/n+D+5PrP8AE5ev8X1Zs9Z/V8T+x6zf0s5T7X8P936m
+56k/T9T7P8ftZ+F+J//Z
+', "updated_at" = '2011-12-22 07:06:34.048110' WHERE "users"."id" = 2
+[paperclip] Saving attachments.
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 190ms
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-22 01:06:34 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered users/_form.html.erb (6.6ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered layouts/_header2.html.erb (1.7ms)
+Rendered users/show.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 112ms (Views: 18.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/bookmarks" for 127.0.0.1 at 2011-12-22 01:06:39 -0600
+  Processing by BookmarksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mBookmark Load (0.3ms)[0m  SELECT "bookmarks".* FROM "bookmarks" INNER JOIN "user_bookmarks" ON "bookmarks".id = "user_bookmarks".bookmark_id WHERE (("user_bookmarks".user_id = 2))
+Rendered layouts/_header2.html.erb (1.9ms)
+Rendered bookmarks/index.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 125ms (Views: 35.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-22 01:06:42 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered users/_form.html.erb (6.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered layouts/_header2.html.erb (1.9ms)
+Rendered users/show.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 95ms (Views: 18.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-22 01:08:33 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered users/_form.html.erb (11.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered layouts/_header2.html.erb (1.8ms)
+Rendered users/show.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 56ms (Views: 23.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-22 01:10:59 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed 500 Internal Server Error in 39ms
+
+NameError (undefined local variable or method `user' for #<Class:0xb84122c>):
+  app/models/user.rb:56:in `<class:User>'
+  app/models/user.rb:2:in `<top (required)>'
+  app/controllers/users_controller.rb:11:in `show'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.6ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-22 01:11:07 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed 500 Internal Server Error in 60ms
+
+NameError (undefined local variable or method `user' for #<Class:0x9d8e31c>):
+  app/models/user.rb:56:in `<class:User>'
+  app/models/user.rb:2:in `<top (required)>'
+  app/controllers/users_controller.rb:11:in `show'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-22 01:11:31 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed 500 Internal Server Error in 38ms
+
+NameError (undefined local variable or method `user' for #<Class:0xac71064>):
+  app/models/user.rb:56:in `<class:User>'
+  app/models/user.rb:2:in `<top (required)>'
+  app/controllers/users_controller.rb:11:in `show'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.7ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.9ms)
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /home/student/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-22 01:14:59 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSQL (5.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed 500 Internal Server Error in 106ms
+
+NameError (undefined local variable or method `user' for #<Class:0x940f19c>):
+  app/models/user.rb:56:in `<class:User>'
+  app/models/user.rb:2:in `<top (required)>'
+  app/controllers/users_controller.rb:11:in `show'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.2ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.4ms)
+
+
+Started GET "/upload_avatar" for 127.0.0.1 at 2011-12-22 01:15:06 -0600
+  Processing by UsersController#upload_avatar as HTML
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed 500 Internal Server Error in 22ms
+
+NameError (undefined local variable or method `user' for #<Class:0x94c1090>):
+  app/models/user.rb:56:in `<class:User>'
+  app/models/user.rb:2:in `<top (required)>'
+  app/helpers/sessions_helper.rb:36:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:21:in `current_user'
+  app/controllers/users_controller.rb:16:in `upload_avatar'
+
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.9ms)
+Rendered /home/student/.rvm/gems/ruby-1.9.2-p290@rails3tutorial/gems/actionpack-3.0.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.7ms)
+
+
+Started GET "/upload_avatar" for 127.0.0.1 at 2011-12-22 01:16:02 -0600
+  Processing by UsersController#upload_avatar as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_users_upload_avatar_html_erb__284213869_82351260__166037758 at /home/student/rails_projects/Bookmark_Project/app/views/users/upload_avatar.html.erb:2)
+Rendered layouts/_header2.html.erb (1.9ms)
+Rendered users/upload_avatar.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 220ms (Views: 11.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-22 01:16:06 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered users/_form.html.erb (76.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered layouts/_header2.html.erb (1.9ms)
+Rendered users/show.html.erb within layouts/application (85.6ms)
+Completed 200 OK in 160ms (Views: 89.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2011-12-22 01:16:20 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (6.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Rendered users/_form.html.erb (12.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Rendered layouts/_header2.html.erb (2.0ms)
+Rendered users/show.html.erb within layouts/application (30.6ms)
+Completed 200 OK in 237ms (Views: 40.7ms | ActiveRecord: 6.4ms)

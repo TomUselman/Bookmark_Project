@@ -53,6 +53,8 @@ class User < ActiveRecord::Base
     end
   end
   
+  #user.avatar = Base64.encode64(File.open("#{Rails.root}/public/images/rails.png").read)
+  
   def set_avatar(uploaded_file)
     base64_encoded_avatar = Base64.encode64(uploaded_file.read)
     self.avatar = base64_encoded_avatar
