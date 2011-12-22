@@ -54,8 +54,9 @@ class User < ActiveRecord::Base
   end
   
   def set_avatar(uploaded_file)
-    self.avatar = Base64.encode64(uploaded_file.read)
-    self.save
+    base64_encoded_avatar = Base64.encode64(uploaded_file.read)
+    self.avatar = base64_encoded_avatar
+    self.save(:validate => false)
   end
     
     private

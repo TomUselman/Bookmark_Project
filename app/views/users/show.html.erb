@@ -2,7 +2,7 @@
 <% render 'form' %>
 <p id="notice"><%= notice %></p>
 
-<%= image_tag @user.photo.url %>
+<img src="data:image/gif;base64,<%= @user.avatar %>">
 
 Username: <%= @user.username %>
 <br />
